@@ -1,0 +1,80 @@
+{
+  "brand": "Cleaning Ideas",
+  "nav": {"services":"Services","process":"Process","industries":"Industries","faq":"FAQ","getQuote":"Get a Quote"},
+  "hero": {
+    "headline":"Fire‑safe. Code‑ready. Breathe‑easy.",
+    "sub":"We specialize in air duct, exhaust, and restaurant hood cleaning that meets fire code and air‑quality standards. Reduce grease, remove dust, and protect your staff, guests, and property.",
+    "primary":"Request a Quote","secondary":"Explore Services",
+    "badges": {"nfpa":"NFPA 96 Compliant","schedule":"24/7 Scheduling","eco":"Eco‑friendly Agents"},
+    "altHero":"Sparkling clean commercial kitchen ventilation",
+    "altTech":"Technician cleaning a restaurant hood and ducts",
+    "altVent":"Air vent grill with clean airflow",
+    "note":"Certified technicians. Photo‑verified results. Detailed before/after reports."
+  },
+  "services": {
+    "heading":"What we clean",
+    "sub":"End‑to‑end cleaning for safer kitchens and cleaner air — with photo documentation and compliance certificates.",
+    "cards": {
+      "hoods": {"title":"Restaurant Hoods & Exhaust","items":["Hoods & canopies","Filters & grease trays","Ducts to roof fan"]},
+      "hvac": {"title":"HVAC & Air Ducts","items":["Supply/return ducts","Diffusers & grills","Coils & air handlers"]},
+      "makeup": {"title":"Make‑Up Air & Roof Fans","items":["Fan blades & housings","Bearings & belts","Grease containment"]},
+      "grease": {"title":"Grease Trap & Floor Care","items":["Degreasing & scrubbing","Pressure washing","Slip‑resistant finish"]},
+      "inspect": {"title":"Inspection & Reporting","items":["Before/after photos","Compliance certificate","Maintenance plans"]},
+      "emergency": {"title":"Emergency Cleanups","items":["24/7 response","Fire marshal coordination","Rapid turnaround"]}
+    }
+  },
+  "value": {
+    "v1": {"title":"Fire Risk Reduced","desc":"We remove grease buildup and combustible dust in accordance with NFPA 96 and local code to reduce ignition sources."},
+    "v2": {"title":"Cleaner Indoor Air","desc":"HEPA filtration and eco‑friendly agents capture fine particulates for healthier kitchens and dining rooms."},
+    "v3": {"title":"Auditable Compliance","desc":"Timestamped reports with photos, service logs, and certificates keep insurers and inspectors satisfied."}
+  },
+  "process": {
+    "heading":"How it works","sub":"A clean, documented process built for safety and minimal downtime.",
+    "steps": [
+      {"t":"Site Walk & Quote","d":"We assess access points, duct runs, and code requirements; you get a clear, fixed quote."},
+      {"t":"Prep & Protect","d":"Surfaces and equipment are covered; signage and lock‑out/tag‑out are in place."},
+      {"t":"Deep Clean","d":"Degreasing, agitation, and hot‑water rinse from hood to fan; HEPA vacuum and wipe‑down."},
+      {"t":"Proof & Certificate","d":"Before/after photos and a compliance certificate for your records and insurer."},
+      {"t":"Maintenance Plan","d":"Set cadence by usage (monthly/quarterly/semi‑annual) to stay code‑ready year‑round."}
+    ]
+  },
+  "industries": {
+    "heading":"Built for busy operations","sub":"We schedule around your rush — overnight, off‑day, or early morning — so you don’t miss a service or a sale.",
+    "cards":["Restaurants & Cafés","Hotels & Venues","Schools & Hospitals"],
+    "note":"Tailored scope, access planning, and reporting for regulated spaces."
+  },
+  "testimonials": {
+    "heading":"What clients say","sub":"Real outcomes from busy kitchens and facilities.",
+    "items":[
+      {"quote":"Passed inspection on the first visit. The photo report made our insurer very happy.","name":"Kitchen Manager, Parkside Bistro"},
+      {"quote":"They cleaned overnight with zero disruption. Our exhaust pulls better than new.","name":"Ops Director, The Green Hotel"},
+      {"quote":"Clear pricing and fast scheduling — we’re now on a quarterly plan.","name":"Owner, Five Corners Café"}
+    ]
+  },
+  "cta": {
+    "heading":"Ready for cleaner air and safer kitchens?",
+    "sub":"Tell us about your setup and we’ll send a fast, firm quote — with a maintenance plan that keeps you code‑ready.",
+    "bullets":["24/7 scheduling around your hours","Before/after photo documentation","Insured, background‑checked techs"]
+  },
+  "form": {
+    "name":"Name","email":"Email","message":"Message","submit":"Get My Quote",
+    "placeholderName":"Jane Doe","placeholderEmail":"jane@business.com","placeholderMsg":"Tell us about your kitchen or facility...",
+    "disclaimer":"By submitting, you agree to be contacted. We’ll never share your info.",
+    "subject":"Request a Quote","lblName":"Name","lblEmail":"Email","lblMsg":"Message"
+  },
+  "faq": {
+    "heading":"FAQ","sub":"Quick answers about scheduling, safety, and compliance.",
+    "items":[
+      {"q":"How often should I clean my restaurant hood and ducts?","a":"Frequency depends on volume and fuel type. Many jurisdictions follow NFPA 96: monthly for high‑volume (e.g., charbroiling), quarterly for moderate, semi‑annual for low. We’ll confirm your local requirements."},
+      {"q":"Do you work overnight or early mornings?","a":"Yes. We routinely schedule during off‑hours to avoid service disruption and to allow for proper cooling and protection."},
+      {"q":"What about documentation for inspectors?","a":"Every job includes before/after photos, a service log, and a compliance certificate you can share with insurers and fire marshals."},
+      {"q":"Are your chemicals food‑safe?","a":"We use degreasers and detergents formulated for commercial kitchens and follow all label directions, PPE, and rinse procedures. HEPA filtration captures fine particulates."}
+    ]
+  },
+  "footer": {
+    "blurb":"Professional air duct and restaurant hood cleaning for safer, healthier spaces.",
+    "services":"Services","company":"Company","contact":"Contact",
+    "listServices":["Restaurant hoods & exhaust","HVAC & air ducts","Make‑up air & roof fans","Inspection & reporting"],
+    "contactEmail":"Email","contactPhone":"Phone","contactArea":"Service area: City + region","rights":"All rights reserved."
+  }
+}
