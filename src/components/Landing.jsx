@@ -22,7 +22,7 @@ export default function Landing() {
   return (
     <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
       {/* NAVBAR */}
-      <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur isolate">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2">
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 to-blue-500 font-bold text-white shadow-lg shadow-sky-500/20">CI</span>
@@ -39,10 +39,10 @@ export default function Landing() {
         </div>
       </header>
 
-      {/* HERO */}
+            {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <SmartImage alt={t('hero.altHero')} className="h-full w-full opacity-25" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80" />
+          <SmartImage eager alt={t('hero.altHero')} className="h-full w-full opacity-25" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=80" />
           <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(56,189,248,0.35),transparent_60%)]" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white" />
         </div>
@@ -167,7 +167,7 @@ export default function Landing() {
       {/* CTA */}
       <section className="relative border-y border-neutral-200 bg-gradient-to-br from-sky-100 via-blue-50 to-white">
         <div className="absolute inset-0 -z-10">
-          <SmartImage src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80" alt={t('hero.altVent')} className="h-full w-full opacity-20" />
+          <SmartImage eager src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80" alt={t('hero.altVent')} className="h-full w-full opacity-20" />
         </div>
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-20 md:grid-cols-2">
           <div>

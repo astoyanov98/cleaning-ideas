@@ -5,7 +5,7 @@ export default function HomePage() {
 }
 
 // src/pages/index.js
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   return {
     props: {
       locale,
