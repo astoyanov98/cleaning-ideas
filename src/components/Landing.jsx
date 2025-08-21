@@ -5,6 +5,7 @@ import {useTranslations} from 'next-intl';
 import LangSwitch from './LangSwitch';
 import SmartImage from './SmartImage';
 import {ShieldIcon, ClockIcon, SparklesIcon, LeafIcon, ClipboardIcon, CheckIcon} from './icons';
+import Subscriptions from './Subscriptions';
 
 export default function Landing() {
   const t = useTranslations();
@@ -16,7 +17,7 @@ export default function Landing() {
     e.preventDefault();
     const subject = encodeURIComponent(`${t('form.subject')} — Cleaning Ideas`);
     const body = encodeURIComponent(`${t('form.lblName')}: ${name}\n${t('form.lblEmail')}: ${email}\n${t('form.lblMsg')}: ${message}`);
-    window.location.href = `mailto:hello@cleaningideas.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:a.stoyanov98@abv.bg?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -126,6 +127,7 @@ export default function Landing() {
           ))}
         </ol>
       </section>
+      {/* <Subscriptions/> */}
 
       {/* INDUSTRIES */}
       <section id="industries" className="border-t border-neutral-200 bg-white">

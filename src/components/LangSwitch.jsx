@@ -21,7 +21,7 @@ export default function LangSwitch(){
     <div className="relative inline-grid grid-cols-2 items-center rounded-xl border border-neutral-200 p-0.5 min-w-[96px] bg-white overflow-hidden">
       {/* Sliding indicator – pure CSS */}
       <span
-        className={`absolute inset-y-0 left-0 w-1/2 rounded-[10px] bg-sky-500 transform transition-transform duration-300 ease-out will-change-transform ${locale==='bg' ? 'translate-x-full' : 'translate-x-0'}`}
+        className={`absolute inset-y-0 left-0 w-1/2 rounded-[10px] bg-sky-500 transform transition-transform duration-400 ease-out will-change-transform ${locale==='bg' ? 'translate-x-full' : 'translate-x-0'}`}
       />
       {/* Buttons */}
       <button
