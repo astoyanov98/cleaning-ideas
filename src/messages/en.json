@@ -1,6 +1,6 @@
 {
   "brand": "Cleaning Ideas",
-  "nav": {"services":"Services","process":"Process","industries":"Industries","faq":"FAQ","getQuote":"Get a Quote"},
+  "nav": {"services":"Services","about":"About","process":"Process","industries":"Industries","faq":"FAQ","getQuote":"Get a Quote"},
   "hero": {
     "headline":"Fire‑safe. Code‑ready. Breathe‑easy.",
     "sub":"We specialize in air duct, exhaust, and restaurant hood cleaning that meets fire code and air‑quality standards. Reduce grease, remove dust, and protect your staff, guests, and property.",
@@ -70,6 +70,67 @@
       {"q":"What about documentation for inspectors?","a":"Every job includes before/after photos, a service log, and a compliance certificate you can share with insurers and fire marshals."},
       {"q":"Are your chemicals food‑safe?","a":"We use degreasers and detergents formulated for commercial kitchens and follow all label directions, PPE, and rinse procedures. HEPA filtration captures fine particulates."}
     ]
+  },
+  "about": {
+    "hero": {
+      "tag": "About us",
+      "title": "Keeping kitchens safe is personal for us",
+      "subtitle": "Cleaning Ideas was founded by technicians who spent years inside busy kitchens and mechanical rooms. We built the company to deliver code-ready cleanings with the documentation inspectors expect.",
+      "primary": "Talk to our team",
+      "secondary": "Return to services",
+      "alt": "Technicians cleaning commercial kitchen exhaust",
+      "stats": [
+        {"value": "12+", "label": "Years focused on commercial kitchens"},
+        {"value": "1,200+", "label": "Systems deep-cleaned"},
+        {"value": "98%", "label": "On-time completion rate"},
+        {"value": "24/7", "label": "Scheduling around your rush"}
+      ]
+    },
+    "pillars": {
+      "heading": "What drives our work",
+      "sub": "Every visit is built around fire safety, indoor air quality, and clear reporting for your stakeholders.",
+      "items": [
+        {"title": "Safety-first standards", "desc": "NFPA 96 checklists, lock-out/tag-out procedures, and photo verification on every job."},
+        {"title": "Quality you can see", "desc": "From degreasing to HEPA detail cleaning, we leave hoods, ducts, and rooftops documented and spotless."},
+        {"title": "Zero-disruption scheduling", "desc": "Overnight, off-day, or early-morning windows that keep service running and guests comfortable."}
+      ]
+    },
+    "story": {
+      "heading": "Built for busy operators",
+      "intro": "We started Cleaning Ideas after seeing how rushed, unplanned cleanings created fire hazards and surprise downtime.",
+      "paragraphs": [
+        "Our founders were technicians first. They noticed crews skipping access panels, leaving grease on rooftops, or providing no proof for insurance.",
+        "We built a process that documents every step, communicates timelines, and leaves managers confident before the next inspection.",
+        "Today, we partner with restaurants, hotels, schools, and healthcare facilities that need the job done right the first time."
+      ],
+      "highlights": ["Photo-verified results", "Certificate of compliance", "Technicians trained for commercial kitchens"],
+      "alt": "Technician wiping down rooftop exhaust fan"
+    },
+    "promise": {
+      "heading": "Our promise",
+      "sub": "From quote to certificate, you get a consistent process that respects your time and your staff.",
+      "items": [
+        "Clear scope, pricing, and schedule before we arrive",
+        "Protection for equipment, floors, and food-contact areas",
+        "After-action reporting ready for inspectors and insurers"
+      ]
+    },
+    "team": {
+      "heading": "Meet the leadership",
+      "lead": {
+        "name": "Alex Stoyanov",
+        "role": "Founder & Operations Lead",
+        "bio": "Alex spent a decade cleaning and inspecting commercial ventilation systems before launching Cleaning Ideas. He trains every technician on safety, communication, and detailed reporting."
+      },
+      "quote": "We earn trust by showing the work — photos, timestamps, and a team that respects your kitchen like it’s their own."
+    },
+    "cta": {
+      "tag": "Next steps",
+      "heading": "Let’s plan your next cleaning day",
+      "sub": "Tell us about your hoods, ducts, and equipment. We’ll share a fixed quote and schedule options that keep your operation moving.",
+      "primary": "Request a quote",
+      "secondary": "Email the team"
+    }
   },
   "footer": {
     "blurb":"Professional air duct and restaurant hood cleaning for safer, healthier spaces.",

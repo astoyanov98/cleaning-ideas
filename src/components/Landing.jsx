@@ -30,6 +30,7 @@ export default function Landing() {
             <span className="text-lg font-semibold tracking-tight">{t('brand')}</span>
           </Link>
           <nav className="hidden items-center gap-3 text-sm md:flex">
+            <Link href="/about" className="px-2 text-neutral-600 hover:text-neutral-900">{t('nav.about')}</Link>
             <a href="#services" className="px-2 text-neutral-600 hover:text-neutral-900">{t('nav.services')}</a>
             <a href="#process" className="px-2 text-neutral-600 hover:text-neutral-900">{t('nav.process')}</a>
             <a href="#industries" className="px-2 text-neutral-600 hover:text-neutral-900">{t('nav.industries')}</a>
@@ -234,7 +235,7 @@ export default function Landing() {
           <div>
             <h4 className="font-semibold">{t('footer.company')}</h4>
             <ul className="mt-3 space-y-2 text-sm text-neutral-600">
-              <li>About</li>
+              <li><Link href="/about" className="hover:text-neutral-900">{t('nav.about')}</Link></li>
               <li>Safety & compliance</li>
               <li>Careers</li>
             </ul>
