@@ -20,11 +20,10 @@ function HeaderLink({ href, className, children }) {
 
 export default function SiteHeader() {
   const navItems = [
-    { href: "/about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#process", label: "Process" },
-    { href: "#industries", label: "Industries" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/services", label: "Услуги" },
+    { href: "/subscription", label: "Абонаменти" },
+    { href: "/blog", label: "Блог" },
+    { href: "/contact", label: "Контакти" },
   ];
 
   return (
@@ -33,7 +32,7 @@ export default function SiteHeader() {
         <Link href="/" className="flex items-center gap-2">
           <div className="flex flex-col items-start">
             <img src="/logo.png" alt="Cleaning Ideas Logo" className="w-44" />
-          <span className="text-secondary font-bold">"Safe kitchen, Secure businesses"</span>
+          <span className="text-secondary font-bold">"Safe Kitchens, Secure Businesses"</span>
           </div>
         </Link>
 
@@ -54,7 +53,7 @@ export default function SiteHeader() {
             href="/#contact"
             className="ml-2 rounded-xl bg-sky-500 px-4 py-2 font-medium text-white hover:bg-sky-400"
           >
-            Get a quote
+            Безплатна оферта
           </HeaderLink>
         </nav>
       </div>

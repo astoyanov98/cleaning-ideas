@@ -1,57 +1,32 @@
-import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { ShieldIcon } from "../components/icons";
+import { plans } from "../data/subscriptionPlans";
 
-const plans = [
-//   {
-//     name: "Основен",
-//     price: "$92",
-//     cadence: "/mo",
-//     description: "Best for small spaces and recurring touch-ups.",
-//     features: [
-//       { description: "2 пъти месечно пити", included: true },
-//       { description: "веднъж месечно чадър", included: false },
-//       { description: "веднъж годишни въздуховод", included: false },
-//     ],
-//   },
-  {
-    name: "Премиум",
-    price: "$281",
-    cadence: "/mo",
-    description: "Our most popular plan for busy households.",
-    features: [
-      { description: "2 пъти месечно пити", included: true },
-      { description: "веднъж месечно чадър", included: true },
-      { description: "веднъж годишни въздуховод", included: false },
-      { description: "веднъж годишни мотор", included: false },
-    ],
-    highlight: true,
-  },  {
-    name: "Ултра",
-    price: "$522",
-    cadence: "/mo",
-    description: "For homes that want weekly sparkle.",
-    features: [
-      { description: "2 пъти месечно пити", included: true },
-      { description: "веднъж месечно чадър", included: true },
-      { description: "веднъж годишни въздуховод", included: true },
-      { description: "веднъж годишни мотор", included: true },
-    ],
-  },
-  {
-    name: "Професионален",
-    price: "$419",
-    cadence: "/mo",
-    description: "For homes that want weekly sparkle.",
-    features: [
-      { description: "2 пъти месечно пити", included: true },
-      { description: "веднъж месечно чадър", included: true },
-      { description: "веднъж годишни въздуховод", included: true },
-      { description: "веднъж годишни мотор", included: false },
-    ],
-  },
-
-];
+const ColorIcon = ({ src, alt, size, color }) => (
+  <span
+    role="img"
+    aria-label={alt}
+    className="block"
+    style={{
+      width: size,
+      height: size,
+      backgroundColor: color,
+      WebkitMaskImage: `url(${src})`,
+      WebkitMaskRepeat: "no-repeat",
+      WebkitMaskPosition: "center",
+      WebkitMaskSize: "contain",
+      maskImage: `url(${src})`,
+      maskRepeat: "no-repeat",
+      maskPosition: "center",
+      maskSize: "contain",
+    }}
+  />
+);
 
 export default function SubscriptionPage() {
+  const [hoveredPlan, setHoveredPlan] = useState(null);
+
   return (
     <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
       <section className="mx-auto max-w-6xl px-6 py-8">
@@ -62,78 +37,163 @@ export default function SubscriptionPage() {
           </p>
         </div>
 
-        <div className="mx-auto flex flex-wrap justify-center items-stretch">
-          {plans.map((plan, index) => (
+        <div className="mx-auto flex sm:h-[590px] items-center flex-col gap-5 py-4 sm:flex-row justify-center">
+          {plans.map((plan) => {
+            const isPro = plan.name === "Expert";
+            const planColor = plan.color || "#5354ae";
+            const hoverIcons = plan.hoverIcons || { flames: 0, shields: 0 };
+            const hasOverlay = hoverIcons.flames > 0 || hoverIcons.shields > 0;
+            const riskPercent = plan.riskPercent;
+            const riskLabel =
+              typeof plan.riskLabel === "string"
+                ? plan.riskLabel
+                : typeof riskPercent === "number"
+                  ? `${riskPercent}% риск от пожар`
+                  : null;
+            const riskColor = plan.riskColor || "text-red-600";
+            const isHoverActive = hoveredPlan === plan.name;
+
+            return (
             <div
               key={plan.name}
               className={[
-                "border text-lg text-center hover:cursor-pointer border-neutral-200 rounded-2xl shadow-sm transition-transform duration-200 hover:shadow-md",
-                "flex h-full w-[280px] flex-col px-12 py-6 min-h-[430px]",
-                index === 1
-                  ? "z-20 bg-linear-to-br from-sky-50 via-sky-100 to-purple-100 scale-[1.08] hover:scale-[1.1]"
-                  : "z-0 bg-white hover:scale-[1.03]",
+                "relative flex h-full w-[290px] flex-col overflow-hidden rounded-[28px] border-4 text-white",
+                "transition-transform duration-200",
+                isHoverActive ? "scale-[1.01]" : "",
               ].join(" ")}
+              style={{ borderColor: planColor, backgroundColor: planColor }}
             >
-              <Image src="/airduct.png" alt="Air duct" width={96} height={96} className="mx-auto" />
+              <div
+                className={[
+                  "flex h-full flex-col transition-[filter] duration-200",
+                  isHoverActive ? "blur-md" : "",
+                ].join(" ")}
+              >
+                <div
+                  className="bg-white px-5 pb-3 pt-5 text-center min-h-[113px]"
+                  style={{ color: planColor }}
+                >
+                  <div className="text-2xl font-extrabold uppercase tracking-[0.16em]">
+                    {plan.name}
+                  </div>
+                  <div
+                    className="mt-1 text-[10px] font-semibold uppercase tracking-[0.24em]"
+                    style={{ color: planColor }}
+                  >
+                    {plan.subtitle}
+                  </div>
+                </div>
 
-              <div className="font-bold mb-4 mt-3">{plan.name}</div>
+                <div className="flex flex-1 flex-col gap-3 p-4">
+                  {plan.offers.map((offer) => {
+                    const itemCount = offer.items.length;
+                    const itemsWrapperClass = [
+                      itemCount === 4
+                        ? "grid grid-cols-2 auto-rows-fr"
+                        : "flex items-stretch",
+                      itemCount === 3
+                        ? isPro
+                          ? "gap-0 justify-center"
+                          : "justify-center"
+                        : itemCount === 2
+                          ? ""
+                          : "justify-center",
+                      itemCount >= 3 ? (isPro ? "mx-auto max-w-[220px]" : "mx-auto max-w-[240px]") : "",
+                    ].join(" ");
 
-              <div className="font-semibold leading-none">
-                <span className="block">{plan.price}</span>
-                <span className="block text-sm font-normal">per month</span>
+                    return (
+                      <div
+                        key={offer.price}
+                        className={`rounded-[20px] bg-white px-3 py-3 text-center ${itemCount === 4 ? "min-h-[362px]" : "min-h-[176px]"}`}
+                        style={{ color: planColor }}
+                      >
+                        <div className={itemsWrapperClass}>
+                          {offer.items.map((item) => (
+                            <div
+                              key={item.label}
+                              className={[
+                                "flex h-full w-full flex-1 flex-col items-center justify-center rounded-xl text-center",
+                                isPro ? "gap-1.5 p-2" : " p-3",
+                              ].join(" ")}
+                            >
+                              <ColorIcon
+                                src={item.icon}
+                                alt={item.alt}
+                                size={isPro ? 48 : 56}
+                                color={planColor}
+                              />
+                              <div
+                                className={[
+                                  "min-h-[24px] font-semibold uppercase tracking-[0.2em] leading-snug text-center",
+                                  isPro ? "text-[9px]" : "text-[10px]",
+                                ].join(" ")}
+                              >
+                                {item.label}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-3 inline-flex overflow-hidden rounded-full border-2 border-orange-500 bg-white text-[11px] font-bold uppercase">
+                          <span className="px-3 py-1.5" style={{ color: planColor }}>
+                            {offer.price}
+                          </span>
+                          <Link
+                            href="/contact"
+                            className="bg-orange-500 px-4 py-1.5 text-white cursor-pointer"
+                            onMouseEnter={() => setHoveredPlan(plan.name)}
+                            onMouseLeave={() => setHoveredPlan(null)}
+                            onFocus={() => setHoveredPlan(plan.name)}
+                            onBlur={() => setHoveredPlan(null)}
+                          >
+                            Купи
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {plan.footer && (
+                  <div className="px-5 pb-4 text-center text-[10px] font-semibold leading-snug text-white/90">
+                    <div>{plan.footer[0]}</div>
+                    <div>{plan.footer[1]}</div>
+                  </div>
+                )}
               </div>
-
-              {/* CHANGE: let this section grow so all cards align heights */}
-              <ul className="mt-5 flex-1 space-y-3 text-sm text-neutral-700 text-left">
-                {plan.features.map((feature) => (
-                  <li key={feature.description} className="flex items-start gap-2">
-                    {/* CHANGE: fixed-size, non-shrinking circle so it never squashes */}
-                    <span
+              {hasOverlay && (
+                <div
+                  className={[
+                    "pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 transition-opacity duration-200",
+                    isHoverActive ? "opacity-100" : "opacity-0",
+                  ].join(" ")}
+                >
+                  {riskLabel && (
+                    <div
                       className={[
-                        "inline-flex size-6 shrink-0 items-center justify-center rounded-full",
-                        feature.included ? "bg-sky-500" : "bg-red-500",
+                        "rounded-full bg-white/90 px-4 py-1 text-base font-extrabold uppercase tracking-[0.2em] shadow-sm whitespace-nowrap",
+                        riskColor,
                       ].join(" ")}
                     >
-                      {feature.included ? (
-                        <svg
-                          className="size-3.5 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="size-3.5 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      )}
-                    </span>
-
-                    <span className="text-left leading-snug">{feature.description}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-2" />
+                      {riskLabel}
+                    </div>
+                  )}
+                  <div className="flex items-center justify-center gap-4">
+                    {Array.from({ length: hoverIcons.flames }).map((_, index) => (
+                      <img key={`flame-${index}`} src="/flame.png" alt="Flame" className="h-12 w-12" />
+                    ))}
+                    {Array.from({ length: hoverIcons.shields }).map((_, index) => (
+                      <ShieldIcon
+                        key={`shield-${index}`}
+                        className="h-10 w-10 text-emerald-500"
+                        fill="currentColor"
+                        stroke="currentColor"
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          ))}
+          );
+          })}
         </div>
       </section>
     </main>
