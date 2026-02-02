@@ -4,55 +4,18 @@
 import * as React from 'react';
 import { Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { planTiers } from '../data/planTiers';
 
 
 export default function PlanCard({ cta, href = '#contact' }) {
   const t = useTranslations();
 
-  const tiers = [
-    {
-      key: 'basic',
-      tag: t('plans.tiers.basic.tag'),
-      name: t('plans.tiers.basic.name'),
-      highlight: false,
-      features: [
-        t('plans.features.ducts'),
-        t('plans.features.grills'),
-        t('plans.features.report'),
-        t('plans.features.certificate'),
-      ],
-    },
-    {
-      key: 'premium',
-      tag: t('plans.tiers.premium.tag'),
-      name: t('plans.tiers.premium.name'),
-      highlight: true, // highlighted card
-      features: [
-        t('plans.features.ducts'),
-        t('plans.features.grills'),
-        t('plans.features.hoods'),
-        t('plans.features.coils'),
-        t('plans.features.report'),
-        t('plans.features.certificate'),
-        t('plans.features.priority'),
-      ],
-    },
-    {
-      key: 'ultra',
-      tag: t('plans.tiers.ultra.tag'),
-      name: t('plans.tiers.ultra.name'),
-      highlight: false,
-      features: [
-        t('plans.features.ducts'),
-        t('plans.features.grills'),
-        t('plans.features.hoods'),
-        t('plans.features.coils'),
-        t('plans.features.grease'),
-        t('plans.features.emergency'),
-        t('plans.features.inspection'),
-      ],
-    },
-  ];
+  const tiers = planTiers.map((tier) => ({
+    ...tier,
+    tag: t(tier.tagKey),
+    name: t(tier.nameKey),
+    features: tier.featureKeys.map((featureKey) => t(featureKey)),
+  }));
 
   return (
     <div className="grid gap-6 md:grid-cols-3">
