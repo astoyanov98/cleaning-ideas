@@ -40,7 +40,7 @@ export default function ServicesPage() {
           <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-sky-100 blur-3xl" />
           <div className="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-amber-100/60 blur-3xl" />
         </div>
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-3 py-16">
           <span className="inline-flex w-fit rounded-full bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 ring-1 ring-inset ring-sky-200">
             Услуги
           </span>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-3 py-16">
           <div className="grid gap-6 md:grid-cols-3">
             {SERVICES.map((service) => {
               const Icon = service.icon;

@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import HeroSection from './HeroSection';
 import Services from './Services';
@@ -10,10 +9,10 @@ export default function Landing() {
   return (
     <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
       <HeroSection />
-      <HowWeWork />
-      <Services />
-      <ProfessionalCareSection />
       <FireSafetySection />
+      <Services />
+      <HowWeWork />
+      <ProfessionalCareSection />
     </main>
   );
 }

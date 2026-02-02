@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import SmartImage from './SmartImage';
 import { CheckIcon } from './icons';
@@ -28,15 +27,15 @@ const steps = [
 export default function HowWeWork() {
   return (
     <section className="border-y border-neutral-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto max-w-7xl px-3 py-16">
         <div className="text-center">
           <div className="flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-emerald-600">
             <span className="h-px w-10 border-t border-dashed border-emerald-400" />
             Как се работи с нас
             <span className="h-px w-10 border-t border-dashed border-emerald-400" />
           </div>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-            Как "Clean Ideas" работи
+          <h2 className="mt-4 md:text-3xl text-2xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+            Как "Cleaning Ideas" работи
           </h2>
         </div>
 

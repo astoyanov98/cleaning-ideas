@@ -1,11 +1,11 @@
-"use client";
+;
 
 import Link from "next/link";
 
 export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
   return (
     <footer className="border-t border-neutral-200 bg-white">
-      <div className={`mx-auto grid ${maxWidth} gap-10 px-6 py-12 md:grid-cols-4`}>
+      <div className={`mx-auto grid ${maxWidth} gap-10 px-3 py-12 md:grid-cols-4`}>
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2">

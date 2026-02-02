@@ -1,4 +1,4 @@
-'use client';
+;
 import Link from "next/link";
 import SmartImage from "../components/SmartImage";
 import { CheckIcon, ShieldIcon, SparklesIcon, ClockIcon } from "../components/icons";
@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white" />
         </div>
 
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-16 md:grid-cols-2 md:pt-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-3 pb-20 pt-16 md:grid-cols-2 md:pt-24">
           <div className="space-y-6">
             <span className="inline-flex w-fit rounded-full bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 ring-1 ring-inset ring-sky-200">
               About Us
@@ -106,7 +106,7 @@ export default function AboutPage() {
                 key={stat.label}
                 className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm"
               >
-                <p className="text-3xl font-bold text-sky-600">{stat.value}</p>
+                <p className="md:text-3xl text-2xl font-bold text-sky-600">{stat.value}</p>
                 <p className="mt-1 text-sm text-neutral-600">{stat.label}</p>
               </div>
             ))}
@@ -115,9 +115,9 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-3 py-16">
           <div className="mb-10 max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
               Our Pillars
             </h2>
             <p className="mt-2 text-neutral-600">
@@ -146,10 +146,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-3 py-16">
         <div className="grid gap-8 md:grid-cols-[1.2fr,1fr] md:items-start">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
               Our Story
             </h2>
             <p className="mt-3 text-neutral-600">
@@ -180,9 +180,9 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-neutral-200 bg-gradient-to-br from-sky-50 via-white to-white">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-16 md:grid-cols-2 md:items-center">
+        <div className="mx-auto grid max-w-6xl gap-8 px-3 py-16 md:grid-cols-2 md:items-center">
           <div>
-            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            <h3 className="text-2xl font-bold tracking-tight sm:md:text-3xl text-2xl">
               Our Promise
             </h3>
             <p className="mt-3 text-neutral-600">
@@ -210,12 +210,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 text-center">
+      <section className="mx-auto max-w-5xl px-3 py-16 text-center">
         <div className="mx-auto max-w-3xl space-y-4">
           <p className="inline-flex rounded-full bg-sky-50 px-3 py-1 text-xs font-medium text-sky-700 ring-1 ring-inset ring-sky-200">
             Let’s Talk
           </p>
-          <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h3 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
             Get a Quote for Your Business
           </h3>
           <p className="text-neutral-600">

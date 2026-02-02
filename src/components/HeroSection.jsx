@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import SmartImage from './SmartImage';
 import { ShieldIcon, ClockIcon, SparklesIcon } from './icons';
@@ -6,9 +5,9 @@ import { ShieldIcon, ClockIcon, SparklesIcon } from './icons';
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 md:grid-cols-2">
-        <div>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-[43px]">
+      <div className="mx-auto grid max-w-7xl items-center md:gap-10 gap-3 px-3 md:py-15 py-5 md:grid-cols-2">
+        <div className="order-2 md:order-1">
+          <h1 className="md:text-4xl text-2xl font-bold leading-tight tracking-tight sm:text-[43px]">
             Професионално почистване на кухненско вентилация
           </h1>
           <p className="mt-3 max-w-xl text-sm text-neutral-500">
@@ -49,7 +48,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative order-1 md:order-2">
           <div className="absolute -inset-1 rounded-3xl" />
           <div className="relative overflow-hidden rounded-3xl bg-white ">
             <SmartImage

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 function HeaderLink({ href, className, children }) {
@@ -20,7 +18,7 @@ function HeaderLink({ href, className, children }) {
 
 export default function SiteHeader() {
   const navItems = [
-    { href: "/services", label: "Услуги" },
+    { href: "#services", label: "Услуги" },
     { href: "/subscription", label: "Абонаменти" },
     { href: "/blog", label: "Блог" },
     { href: "/contact", label: "Контакти" },
@@ -28,21 +26,21 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pb-2">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="mx-auto flex max-w-7xl items-center gap-4 px-3 pb-2">
+        <Link href="/" className="flex items-center gap-2 md:flex-1">
           <div className="flex flex-col items-start">
             <img src="/logo.png" alt="Cleaning Ideas Logo" className="w-44" />
-          <span className="text-secondary font-bold">"Safe Kitchens, Secure Businesses"</span>
+            <span className="text-secondary font-bold">"Safe Kitchens, Secure Businesses"</span>
           </div>
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden items-center gap-3 text-sm md:flex">
+        <nav className="hidden flex-1 items-center justify-end gap-3 text-sm md:flex">
           {navItems.map((item) => (
             <HeaderLink
               key={item.href}
               href={item.href}
-              className="px-2 text-neutral-600 hover:text-secondary"
+              className="px-3 text-neutral-600 hover:text-secondary"
             >
               {item.label}
             </HeaderLink>

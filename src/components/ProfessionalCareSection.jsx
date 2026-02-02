@@ -1,4 +1,4 @@
-'use client';
+;
 import React from 'react';
 import SmartImage from './SmartImage';
 import {
@@ -12,7 +12,7 @@ import {
 export default function ProfessionalCareSection() {
   return (
     <section className="border-y border-neutral-200 bg-gradient-to-b from-sky-50/60 to-white">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-3 py-16 md:grid-cols-2">
         <div className="relative">
           <div className="absolute -inset-2 rounded-3xl" />
           <div className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
@@ -32,7 +32,7 @@ export default function ProfessionalCareSection() {
             <ShieldIcon className="h-3.5 w-3.5 text-sky-600" />
             Сертифицирано почистване
           </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
             Професионална грижа за чиста и безопасна кухня
           </h2>
           <p className="mt-4 max-w-prose text-neutral-600">

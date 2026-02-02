@@ -1,5 +1,5 @@
 // app/components/PlanCard.tsx
-'use client';
+;
 
 import * as React from 'react';
 import { Check } from 'lucide-react';
@@ -36,8 +36,8 @@ export default function PlanCard({ cta, href = '#contact' }) {
           <div
             className={
               tier.highlight
-                ? 'absolute -top-3 right-4 inline-flex items-center rounded-full bg-sky-500 px-2 py-1 text-[10px] font-semibold text-white shadow-sm'
-                : 'absolute -top-3 right-4 inline-flex items-center rounded-full border border-neutral-200 bg-white px-2 py-1 text-[10px] font-medium text-neutral-600'
+                ? 'absolute -top-3 right-4 inline-flex items-center rounded-full bg-sky-500 px-3 py-1 text-[10px] font-semibold text-white shadow-sm'
+                : 'absolute -top-3 right-4 inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-[10px] font-medium text-neutral-600'
             }
           >
             {tier.tag}

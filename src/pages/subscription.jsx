@@ -29,9 +29,9 @@ export default function SubscriptionPage() {
 
   return (
     <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
-      <section className="mx-auto max-w-6xl px-6 py-8">
+      <section className="mx-auto max-w-6xl px-3 py-8">
         <div className="mb-10 max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Choose your plan</h2>
+          <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">Choose your plan</h2>
           <p className="mt-2 text-neutral-600">
             Switch plans anytime. Every subscription includes a satisfaction guarantee.
           </p>
