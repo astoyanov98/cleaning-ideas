@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const SectionIcon = ({ children }) => (
   <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-100">
@@ -152,17 +152,17 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
           </h4>
           <ul className="mt-5 space-y-2 text-sm text-neutral-600">
             <li>
-              <Link href="/about" className={footerLinkClass}>
+              <Link href="/za-nas" className={footerLinkClass}>
                 За нас
               </Link>
             </li>
             <li>
-              <Link href="/about" className={footerLinkClass}>
+              <Link href="/za-nas" className={footerLinkClass}>
                 Безопасност и съответствие
               </Link>
             </li>
             <li>
-              <Link href="/contact" className={footerLinkClass}>
+              <Link href="/kontakti" className={footerLinkClass}>
                 Сертификати и документация
               </Link>
             </li>
@@ -225,7 +225,7 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
                 <path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z" />
                 <circle cx="12" cy="10" r="2.5" />
               </svg>
-              <Link href="/contact" className={footerLinkClass}>
+              <Link href="/kontakti" className={footerLinkClass}>
                 Обслужваме търговски обекти в цялата страна
               </Link>
             </li>

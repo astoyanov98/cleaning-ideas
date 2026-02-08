@@ -19,13 +19,13 @@ export default function HeroSection() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="#contact"
+              href="/kontakti"
               className="rounded-xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 hover:bg-sky-400"
             >
               Безплатна оферта
             </a>
             <a
-              href="#services"
+              href="#uslugi"
               className="rounded-xl border border-neutral-200 px-5 py-3 font-semibold text-neutral-900 hover:bg-neutral-50"
             >
               Виж услугите

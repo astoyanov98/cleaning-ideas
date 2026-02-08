@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -11,8 +11,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-secondary: var(--secondary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --color-sky-50: #f2faf1;
   --color-sky-100: #e1f3df;
   --color-sky-200: #c5e7c2;
@@ -35,7 +35,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-sans);
 }
 
 @keyframes fade-in-up { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }

@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { planTiers } from '../data/planTiers';
 
 
-export default function PlanCard({ cta, href = '#contact' }) {
+export default function PlanCard({ cta, href = '/kontakti' }) {
   const t = useTranslations();
 
   const tiers = planTiers.map((tier) => ({

@@ -26,7 +26,7 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="border-y border-neutral-200 bg-white">
+    <section id="kak-rabotim" className="scroll-mt-24 border-y border-neutral-200 bg-white md:scroll-mt-28">
       <div className="mx-auto max-w-7xl px-3 py-16">
         <div className="text-center">
           <div className="flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-emerald-600">

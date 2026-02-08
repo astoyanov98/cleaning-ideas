@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function HeaderLink({ href, className, children, onClick }) {
@@ -21,10 +22,10 @@ export default function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/#services", label: "Услуги" },
-    { href: "/subscription", label: "Абонаменти" },
+    { href: "/#uslugi", label: "Услуги" },
+    { href: "/#kak-rabotim", label: "Процес" },
+    { href: "/abonamenti", label: "Абонаменти" },
     { href: "/blog", label: "Блог" },
-    { href: "/contact", label: "Контакти" },
   ];
 
   useEffect(() => {
@@ -57,7 +58,14 @@ export default function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-2">
         <Link href="/" className="flex items-center gap-2 md:flex-1" onClick={closeMobileMenu}>
           <div className="flex flex-col items-start">
-            <img src="/logo.png" alt="Cleaning Ideas Logo" className="w-36 sm:w-44" />
+            <Image
+              src="/logo.png"
+              alt="Cleaning Ideas Logo"
+              width={702}
+              height={355}
+              className="h-auto w-36 sm:w-44"
+              sizes="(max-width: 640px) 9rem, 11rem"
+            />
             <span className="hidden text-xs font-bold text-secondary sm:block">
               "Safe Kitchens, Secure Businesses"
             </span>
@@ -76,7 +84,7 @@ export default function SiteHeader() {
           ))}
 
           <HeaderLink
-            href="/#contact"
+            href="/kontakti"
             className="ml-2 rounded-xl bg-sky-500 px-4 py-2 font-medium text-white hover:bg-sky-400"
           >
             Безплатна оферта
@@ -122,7 +130,7 @@ export default function SiteHeader() {
           ))}
 
           <HeaderLink
-            href="/#contact"
+            href="/kontakti"
             onClick={closeMobileMenu}
             className="mt-2 rounded-xl bg-sky-500 px-4 py-2 text-center font-medium text-white hover:bg-sky-400"
           >

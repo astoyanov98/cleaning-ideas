@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import SmartImage from './SmartImage';
 import { ShieldIcon } from './icons';
 
@@ -31,7 +32,7 @@ export default function FireSafetySection() {
         <div className="grid items-center gap-12 md:gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700 shadow-sm">
-              <img src="/flame.png" alt="" className="h-4 w-4" aria-hidden="true" />
+              <Image src="/flame.png" alt="" width={16} height={16} className="h-4 w-4" aria-hidden="true" />
               Пожарна безопасност
             </div>
             <h2 className="mt-5 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
@@ -64,7 +65,7 @@ export default function FireSafetySection() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <div className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white/90 p-4 shadow-sm">
             <div className="text-amber-600">
-              <img src="/flame.png" alt="" className="h-12 w-12" aria-hidden="true" />
+              <Image src="/flame.png" alt="" width={48} height={48} className="h-12 w-12" aria-hidden="true" />
             </div>
             <div className="text-amber-700">
               <div className="text-sm font-semibold">

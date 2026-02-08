@@ -4,7 +4,7 @@ import { services } from '@/data/services';
 
 export default function Services() {
   return (
-    <section id="services" className="border-y border-neutral-200 bg-white">
+    <section id="uslugi" className="scroll-mt-24 border-y border-neutral-200 bg-white md:scroll-mt-28">
       <div className="mx-auto max-w-7xl px-3 py-16">
         <div className="mb-8">
           <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
@@ -57,9 +57,6 @@ export default function Services() {
                     <h3 className={`text-lg font-semibold ${titleColor}`}>
                       {service.title}
                     </h3>
-                    <p className="mt-2 text-sm text-neutral-500">
-                      {service.desc}
-                    </p>
                   </div>
                   <a
                     href={service.href}

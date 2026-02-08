@@ -1,15 +1,18 @@
 import React from 'react';
+import Image from 'next/image';
 export default function SmartImage({ src, alt, className, imgClassName }) {
   const [failed, setFailed] = React.useState(false);
   return (
     <div className={`relative ${className ?? ''}`}>
       {!failed ? (
-        <img
+        <Image
           src={src}
           alt={alt}
-          loading="lazy"
+          fill
+          sizes="100vw"
+          unoptimized={typeof src === 'string' && src.startsWith('http')}
           referrerPolicy="no-referrer"
-          className={`absolute inset-0 h-full w-full ${imgClassName ?? 'object-cover'}`}
+          className={`h-full w-full ${imgClassName ?? 'object-cover'}`}
           onError={() => setFailed(true)}
         />
       ) : (
