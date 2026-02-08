@@ -231,7 +231,7 @@ export default function AboutPage() {
             Contact Us
           </Link>
           <Link
-            href="mailto:hello@cleaningideas.com"
+            href="mailto:office@cleaningideas.bg"
             className="rounded-xl border border-neutral-200 px-5 py-3 font-semibold text-neutral-900 hover:bg-neutral-50"
           >
             Email Us

@@ -1,4 +1,3 @@
-;
 import React from 'react';
 export default function SmartImage({ src, alt, className, imgClassName }) {
   const [failed, setFailed] = React.useState(false);

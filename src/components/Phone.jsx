@@ -2,9 +2,9 @@
 export default function Phone({ children }) {
     return (
         <>
-            <div className="fixed bottom-6 right-6 md:hidden md:left-20 md:right-auto md:bottom-20 z-50">
+            <div className="fixed bottom-6 right-6 md:hidden z-50">
                 <a
-                    href="tel:+359882245771"
+                    href="tel:+359884918067"
                     className="
                         group flex items-center gap-3 rounded-full
                         px-0 py-0 bg-transparent shadow-none
@@ -38,7 +38,7 @@ export default function Phone({ children }) {
                             group-hover:opacity-100 group-hover:translate-x-0 group-hover:max-w-[180px]
                         "
                     >
-                        088 224 5771
+                        0884918067
                     </span>
                 </a>
             </div>
