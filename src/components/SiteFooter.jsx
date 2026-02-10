@@ -68,7 +68,7 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
 
           <div className="mt-4 flex items-center gap-2">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/profile.php?id=61587934194877"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -77,7 +77,7 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
               <FacebookIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/cleaningideas25/"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
