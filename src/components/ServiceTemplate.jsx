@@ -4,6 +4,7 @@ export default function ServiceTemplate({
   heroImage,
   heroTitle,
   heroSubtitle,
+  heroOverlayClass = "",
   introTitle,
   introParagraphs,
   processSteps,
@@ -22,7 +23,7 @@ export default function ServiceTemplate({
           sizes="100vw"
           className="absolute inset-0 -z-20 object-cover"
         />
-        <div className="absolute inset-0 -z-10" />
+        <div className={`absolute inset-0 -z-10 ${heroOverlayClass}`} />
 
         <div className="mx-auto max-w-6xl px-3 py-20 text-center text-white md:py-28">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
