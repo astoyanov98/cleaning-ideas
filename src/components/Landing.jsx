@@ -14,7 +14,7 @@ export default function Landing() {
       <FireStatsSection />
       <Services />
       <HowWeWork />
-      <ProfessionalCareSection />
+      {/* <ProfessionalCareSection /> */}
     </main>
   );
 }

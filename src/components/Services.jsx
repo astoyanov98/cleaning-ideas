@@ -1,8 +1,19 @@
 import React from 'react';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import SmartImage from './SmartImage';
 import { services } from '@/data/services';
 
 export default function Services() {
+  const router = useRouter();
+
+  useEffect(() => {
+    services.forEach((service) => {
+      router.prefetch(service.href);
+    });
+  }, [router]);
+
   return (
     <section id="uslugi" className="scroll-mt-24 border-y border-neutral-200 bg-white md:scroll-mt-28">
       <div className="mx-auto max-w-7xl px-3 py-16">
@@ -58,7 +69,7 @@ export default function Services() {
                       {service.title}
                     </h3>
                   </div>
-                  <a
+                  <Link
                     href={service.href}
                     className={`group relative mt-4 inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full border px-4 py-2 text-sm font-semibold transition-colors duration-300 hover:text-white ${buttonBorder}`}
                   >
@@ -67,7 +78,7 @@ export default function Services() {
                       aria-hidden="true"
                     />
                     <span className="relative z-10">{service.cta}</span>
-                  </a>
+                  </Link>
                 </div>
               </article>
             );

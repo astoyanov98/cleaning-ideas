@@ -3,6 +3,7 @@
 
 import * as React from 'react';
 import { Check } from 'lucide-react';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { planTiers } from '../data/planTiers';
 
@@ -63,7 +64,7 @@ export default function PlanCard({ cta, href = '/kontakti' }) {
           </ul>
 
           {/* CTA */}
-          <a
+          <Link
             href={href}
             className={[
               'relative mt-5 inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm',
@@ -73,7 +74,7 @@ export default function PlanCard({ cta, href = '/kontakti' }) {
             ].join(' ')}
           >
             {cta}
-          </a>
+          </Link>
         </article>
       ))}
     </div>

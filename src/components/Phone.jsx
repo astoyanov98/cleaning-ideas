@@ -1,9 +1,11 @@
 
+import Link from "next/link";
+
 export default function Phone({ children }) {
     return (
         <>
             <div className="fixed bottom-6 right-6 md:hidden z-50">
-                <a
+                <Link
                     href="tel:+359884918067"
                     className="
                         group flex items-center gap-3 rounded-full
@@ -40,7 +42,7 @@ export default function Phone({ children }) {
                     >
                         0884918067
                     </span>
-                </a>
+                </Link>
             </div>
 
         </>

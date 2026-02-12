@@ -207,12 +207,3 @@ export default function SubscriptionPage() {
     </main>
   );
 }
-
-export async function getServerSideProps({ locale }) {
-  return {
-    props: {
-      locale,
-      messages: (await import(`../messages/${locale}.json`)).default,
-    },
-  };
-}

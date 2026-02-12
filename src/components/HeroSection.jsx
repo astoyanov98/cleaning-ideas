@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import SmartImage from './SmartImage';
 import { ShieldIcon, ClockIcon, SparklesIcon } from './icons';
 
@@ -18,18 +19,18 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a
+            <Link
               href="/kontakti"
               className="rounded-xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 hover:bg-sky-400"
             >
               Безплатна оферта
-            </a>
-            <a
+            </Link>
+            <Link
               href="#uslugi"
               className="rounded-xl border border-neutral-200 px-5 py-3 font-semibold text-neutral-900 hover:bg-neutral-50"
             >
               Виж услугите
-            </a>
+            </Link>
           </div>
 
           <div className="mt-8 flex items-center gap-6 text-xs text-neutral-500">

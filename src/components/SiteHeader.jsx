@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 function HeaderLink({ href, className, children, onClick }) {
   if (href.startsWith("#")) {
     return (
-      <a href={href} className={className} onClick={onClick}>
+      <Link href={href} className={className} onClick={onClick}>
         {children}
-      </a>
+      </Link>
     );
   }
 

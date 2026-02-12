@@ -18,7 +18,7 @@ const steps = [
   {
     title: 'Професионално почистване и отчет',
     desc: 'Сертифицирани техници изпълняват услугата. Получавате документация и препоръки.',
-    image: '/image.png',
+    image: '/pochistvane.png',
     alt: 'Ilustraciya za profesionalno pochistvane i otchet',
     icon: <CheckIcon className="h-7 w-7 text-emerald-500" />,
   },

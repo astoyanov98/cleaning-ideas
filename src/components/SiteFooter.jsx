@@ -67,7 +67,7 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
           </p>
 
           <div className="mt-4 flex items-center gap-2">
-            <a
+            <Link
               href="https://www.facebook.com"
               target="_blank"
               rel="noreferrer"
@@ -75,8 +75,8 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
               className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(135deg,#1877F2,#0D5FDB)] text-white shadow-[0_10px_20px_-12px_rgba(24,119,242,0.9)] transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-[0_16px_28px_-12px_rgba(24,119,242,0.95)]"
             >
               <FacebookIcon className="h-5 w-5" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com"
               target="_blank"
               rel="noreferrer"
@@ -84,14 +84,14 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
               className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(135deg,#F58529,#DD2A7B,#8134AF,#515BD4)] text-white shadow-[0_10px_20px_-12px_rgba(221,42,123,0.9)] transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-[0_16px_28px_-12px_rgba(221,42,123,0.95)]"
             >
               <InstagramIcon className="h-5 w-5" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="mailto:office@cleaningideas.bg"
               aria-label="Google Mail"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_10px_20px_-12px_rgba(0,0,0,0.28)] transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-[0_16px_28px_-12px_rgba(66,133,244,0.5)]"
             >
               <GoogleGIcon className="h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -196,9 +196,9 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
                 <path d="M4 6h16v12H4z" />
                 <path d="m4 7 8 6 8-6" />
               </svg>
-              <a href="mailto:office@cleaningideas.bg" className={footerLinkClass}>
+              <Link href="mailto:office@cleaningideas.bg" className={footerLinkClass}>
                 office@cleaningideas.bg
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-2">
               <svg
@@ -210,9 +210,9 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
               >
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.9.36 1.77.68 2.6a2 2 0 0 1-.45 2.11L9 10a16 16 0 0 0 5 5l.57-1.23a2 2 0 0 1 2.11-.45c.83.32 1.7.55 2.6.68A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+359884918067" className={footerLinkClass}>
+              <Link href="tel:+359884918067" className={footerLinkClass}>
                 0884918067
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-2">
               <svg

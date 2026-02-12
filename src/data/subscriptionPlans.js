@@ -28,14 +28,14 @@ export const plans = [
       {
         items: [
           { icon: "/pita.png", alt: "Filter", label: "2 пъти месечно" },
-          { icon: "/chadur.png", alt: "Umbrella", label: "веднъж месечно" },
+          { icon: "/chadur.svg", alt: "Umbrella", label: "веднъж месечно" },
         ],
         price: "€285",
       },
       {
         items: [
           { icon: "/pita.png", alt: "Filter", label: "4 пъти месечно" },
-          { icon: "/chadur.png", alt: "Umbrella", label: "веднъж месечно" },
+          { icon: "/chadur.svg", alt: "Umbrella", label: "веднъж месечно" },
         ],
         price: "€360",
       },
@@ -52,7 +52,7 @@ export const plans = [
       {
         items: [
           { icon: "/pita.png", alt: "Filter", label: "2 пъти месечно" },
-          { icon: "/chadur.png", alt: "Umbrella", label: "веднъж на 2 месеца" },
+          { icon: "/chadur.svg", alt: "Umbrella", label: "веднъж на 2 месеца" },
           { icon: "/motor.png", alt: "Motor", label: "веднъж годишно" },
         ],
         price: "€365",
@@ -60,7 +60,7 @@ export const plans = [
       {
         items: [
           { icon: "/pita.png", alt: "Filter", label: "4 пъти месечно" },
-          { icon: "/chadur.png", alt: "Umbrella", label: "веднъж месечно" },
+          { icon: "/chadur.svg", alt: "Umbrella", label: "веднъж месечно" },
           { icon: "/motor.png", alt: "Motor", label: "веднъж годишно" },
         ],
         price: "€420",
@@ -83,7 +83,7 @@ export const plans = [
       {
         items: [
           { icon: "/pita.png", alt: "Filter", label: "4 пъти месечно" },
-          { icon: "/chadur.png", alt: "Umbrella", label: "веднъж месечно" },
+          { icon: "/chadur.svg", alt: "Umbrella", label: "веднъж месечно" },
           { icon: "/motor.png", alt: "Motor", label: "2 пъти годишно" },
           { icon: "/airduct.png", alt: "Air duct", label: "веднъж годишно" },
         ],
