@@ -62,20 +62,18 @@ export default function ServiceTemplate({
       <section>
         <div className="mx-auto max-w-6xl px-3 py-12 md:py-16">
           {/* Mobile layout */}
-          <div className="space-y-8 md:hidden">
+          <div className="space-y-6 md:hidden">
             {processSteps?.map((step, index) => (
               <article
                 key={`mobile-${step.title}-${index}`}
                 className="rounded-2xl border border-neutral-200 bg-white/90 p-2 shadow-sm"
               >
-                <div className="overflow-hidden rounded-xl bg-white">
+                <div className="relative h-[165px] w-full overflow-hidden rounded-xl bg-white">
                   <Image
                     src={step.image}
                     alt={step.title}
-                    width={720}
-                    height={550}
-                    className="h-auto w-full object-cover"
-                    sizes="(max-width: 768px) 100vw, 340px"
+                    fill
+                    className="object-cover transition-transform duration-[400ms] ease-out hover:scale-105"
                   />
                 </div>
                 <div className="px-1 pb-2 pt-4">
@@ -94,29 +92,28 @@ export default function ServiceTemplate({
           </div>
 
           {/* Desktop layout */}
-          <div className="hidden items-center gap-8 md:mx-auto md:w-fit md:flex md:flex-row md:items-center md:justify-center md:gap-12">
-            <div className="mx-auto w-full max-w-[340px] space-y-6 md:space-y-8 md:pr-20">
+          <div className="hidden items-center gap-12 md:mx-auto md:w-fit md:flex md:flex-row md:items-center md:justify-center">
+            <div className="space-y-6 md:pr-20">
               {processSteps?.map((step, index) => (
                 <div key={`${step.title}-image-${index}`} className="relative">
                   <div className="overflow-hidden rounded-2xl bg-white p-2">
-                    <Image
-                      src={step.image}
-                      alt={step.title}
-                      width={720}
-                      height={550}
-                      className="h-auto w-full rounded-xl object-cover"
-                      sizes="(max-width: 1024px) 45vw, 340px"
-                    />
+                    <div className="relative h-[165px] w-[245px] overflow-hidden rounded-xl">
+                      <Image
+                        src={step.image}
+                        alt={step.title}
+                        fill
+                        className="object-cover transition-transform duration-[400ms] ease-out hover:scale-105"
+                      />
+                    </div>
                   </div>
                   {index < processSteps.length - 1 && (
                     <Image
                       src="/Arrow.png"
                       alt=""
-                      width={720}
-                      height={550}
+                      width={150}
+                      height={100}
                       aria-hidden="true"
-                      className="pointer-events-none absolute -right-[50px] top-[calc(100%-35px)] hidden h-auto w-40 object-contain [filter:brightness(0)] md:block lg:-right-40 lg:w-48"
-                      sizes="(max-width: 1024px) 10rem, 12rem"
+                      className="pointer-events-none absolute -right-[50px] top-[calc(100%-30px)] hidden h-auto w-36 object-contain [filter:brightness(0)] md:block lg:-right-40 lg:w-40"
                     />
                   )}
                 </div>

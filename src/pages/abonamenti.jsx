@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ShieldIcon } from "../components/icons";
 import { plans } from "../data/subscriptionPlans";
 
@@ -27,11 +27,20 @@ const ColorIcon = ({ src, alt, size, color }) => (
 
 export default function SubscriptionPage() {
   const [hoveredPlan, setHoveredPlan] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   return (
     <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
       <section className="mx-auto max-w-6xl px-3 py-8">
-        <div className="mb-10 max-w-3xl">
+        <div 
+          className={`mb-10 max-w-3xl transition-all duration-700 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">Choose your plan</h2>
           <p className="mt-2 text-neutral-600">
             Switch plans anytime. Every subscription includes a satisfaction guarantee.
@@ -39,7 +48,7 @@ export default function SubscriptionPage() {
         </div>
 
         <div className="mx-auto flex sm:h-[590px] items-center flex-col gap-5 py-4 sm:flex-row justify-center">
-          {plans.map((plan) => {
+          {plans.map((plan, planIndex) => {
             const isPro = plan.name === "Expert";
             const planColor = plan.color || "#5354ae";
             const hoverIcons = plan.hoverIcons || { flames: 0, shields: 0 };
@@ -59,10 +68,15 @@ export default function SubscriptionPage() {
               key={plan.name}
               className={[
                 "relative flex h-full w-[290px] flex-col overflow-hidden rounded-[28px] border-4 text-white",
-                "transition-transform duration-200",
+                "transition-all duration-500 ease-out",
                 isHoverActive ? "scale-[1.01]" : "",
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0",
               ].join(" ")}
-              style={{ borderColor: planColor, backgroundColor: planColor }}
+              style={{ 
+                borderColor: planColor, 
+                backgroundColor: planColor,
+                transitionDelay: `${150 + planIndex * 150}ms`,
+              }}
             >
               <div
                 className={[

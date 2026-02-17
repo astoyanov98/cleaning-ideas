@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import SmartImage from './SmartImage';
 import { services } from '@/data/services';
 
 export default function Services() {
   const router = useRouter();
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     services.forEach((service) => {
@@ -14,10 +15,32 @@ export default function Services() {
     });
   }, [router]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="uslugi" className="scroll-mt-24 border-y border-neutral-200 bg-white md:scroll-mt-28">
+    <section id="uslugi" ref={sectionRef} className="scroll-mt-24 border-y border-neutral-200 bg-white md:scroll-mt-28">
       <div className="mx-auto max-w-7xl px-3 py-16">
-        <div className="mb-8">
+        <div 
+          className={`mb-8 transition-all duration-700 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
             Услуги
           </h2>
@@ -42,7 +65,10 @@ export default function Services() {
             return (
               <article
                 key={service.title}
-                className={`flex h-full flex-col overflow-hidden rounded-3xl border bg-white text-center transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.02] ${cardBorder}`}
+                className={`flex h-full flex-col overflow-hidden rounded-3xl border bg-white text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] ${cardBorder} ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
+                style={{ transitionDelay: `${200 + idx * 100}ms` }}
               >
                 <div className={`relative flex h-44 items-center justify-center py-2 ${headerBg}`}>
                   <div
