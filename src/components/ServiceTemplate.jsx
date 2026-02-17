@@ -80,9 +80,11 @@ export default function ServiceTemplate({
                 </div>
                 <div className="px-1 pb-2 pt-4">
                   <h3 className="text-lg font-semibold">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-700">
-                    {step.description}
-                  </p>
+                  {step.description && (
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-700">
+                      {step.description}
+                    </p>
+                  )}
                   <p className="mt-3 text-xs font-medium uppercase tracking-[0.15em] text-emerald-700">
                     Стъпка {index + 1}
                   </p>
@@ -128,9 +130,11 @@ export default function ServiceTemplate({
                   className={index === 0 ? "pt-0" : "border-t border-neutral-900/25 pt-4"}
                 >
                   <h3 className="text-lg font-semibold">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-neutral-700">
-                    {step.description}
-                  </p>
+                  {step.description && (
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-700">
+                      {step.description}
+                    </p>
+                  )}
                   <p className="mt-3 text-xs font-medium uppercase tracking-[0.15em] text-emerald-700">
                     Стъпка {index + 1}
                   </p>
@@ -219,4 +223,3 @@ export default function ServiceTemplate({
     </main>
   );
 }
-

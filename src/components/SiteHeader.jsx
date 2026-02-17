@@ -23,7 +23,6 @@ export default function SiteHeader() {
 
   const navItems = [
     { href: "/#uslugi", label: "Услуги" },
-    { href: "/#kak-rabotim", label: "Процес" },
     { href: "/abonamenti", label: "Абонаменти" },
     { href: "/blog", label: "Блог" },
   ];
@@ -87,7 +86,7 @@ export default function SiteHeader() {
             href="/kontakti"
             className="ml-2 rounded-xl bg-sky-500 px-4 py-2 font-medium text-white hover:bg-sky-400"
           >
-            Безплатна оферта
+            Контакти
           </HeaderLink>
         </nav>
 
@@ -134,7 +133,7 @@ export default function SiteHeader() {
             onClick={closeMobileMenu}
             className="mt-2 rounded-xl bg-sky-500 px-4 py-2 text-center font-medium text-white hover:bg-sky-400"
           >
-            Безплатна оферта
+            Контакти
           </HeaderLink>
         </nav>
       </div>

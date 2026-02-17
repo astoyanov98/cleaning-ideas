@@ -1,4 +1,5 @@
 import ContactForm from "../components/ContactForm";
+import ContactInfoSection from "../components/ContactInfoSection";
 
 export default function ContactPage() {
   return (
@@ -15,6 +16,9 @@ export default function ContactPage() {
               <li>Гъвкав график за посещение.</li>
               <li>Екип с професионално оборудване.</li>
             </ul>
+            <div className="mt-8 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
+              <ContactInfoSection />
+            </div>
           </div>
           <ContactForm id="contact-form" />
         </div>

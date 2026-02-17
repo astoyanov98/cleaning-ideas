@@ -16,7 +16,7 @@ export default function Phone({ children }) {
                     "
                 >
                     {/* ICON */}
-                    <div className="grid h-10 w-10 place-items-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-600">
+                    <div className="grid h-12 w-12 place-items-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-600">
                         <svg
                             viewBox="0 0 24 24"
                             fill="none"
@@ -24,7 +24,7 @@ export default function Phone({ children }) {
                             strokeWidth="1.8"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="h-5 w-5"
+                            className="h-6 w-6"
                         >
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.9.36 1.77.68 2.6a2 2 0 0 1-.45 2.11L9 10a16 16 0 0 0 5 5l.57-1.23a2 2 0 0 1 2.11-.45c.83.32 1.7.55 2.6.68A2 2 0 0 1 22 16.92z" />
                         </svg>
