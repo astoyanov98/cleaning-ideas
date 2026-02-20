@@ -117,22 +117,22 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
           </h4>
           <ul className="mt-5 space-y-2 text-sm text-neutral-600">
             <li>
-              <Link href="/pochistene-na-vuzduhovodi" className={footerLinkClass}>
+              <Link href="/pochistvane-na-vuzduhovodi" className={footerLinkClass}>
                 Почистване на въздуховоди
               </Link>
             </li>
             <li>
-              <Link href="/pochistene-na-kuhnenski-chadari" className={footerLinkClass}>
+              <Link href="/pochistvane-na-kuhnenski-chadari" className={footerLinkClass}>
                 Почистване на кухненски чадъри
               </Link>
             </li>
             <li>
-              <Link href="/pochistene-na-filtri-s-ultrazvuk" className={footerLinkClass}>
+              <Link href="/pochistvane-na-filtri-s-ultrazvuk" className={footerLinkClass}>
                 Почистване на филтри
               </Link>
             </li>
             <li>
-              <Link href="/pochistene-na-motori" className={footerLinkClass}>
+              <Link href="/pochistvane-na-motori" className={footerLinkClass}>
                 Почистване на мотори
               </Link>
             </li>
@@ -157,18 +157,13 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
           </h4>
           <ul className="mt-5 space-y-2 text-sm text-neutral-600">
             <li>
-              <Link href="/za-nas" className={footerLinkClass}>
-                За нас
-              </Link>
-            </li>
-            <li>
-              <Link href="/za-nas" className={footerLinkClass}>
-                Безопасност и съответствие
-              </Link>
-            </li>
-            <li>
               <Link href="/kontakti" className={footerLinkClass}>
-                Сертификати и документация
+                Контакти
+              </Link>
+            </li>
+            <li>
+              <Link href="/politika-za-poveritelnost" className={footerLinkClass}>
+                Политика за поверителност
               </Link>
             </li>
           </ul>
@@ -178,7 +173,10 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
       </div>
 
       <div className="border-t border-neutral-200 py-6 text-center text-xs text-neutral-500">
-        © {new Date().getFullYear()} Cleaning Ideas. Всички права запазени.
+        <p>© {new Date().getFullYear()} Cleaning Ideas. Всички права запазени.</p>
+        <Link href="/politika-za-poveritelnost" className="mt-2 inline-block text-neutral-500 hover:text-emerald-600 transition-colors">
+          Политика за поверителност
+        </Link>
       </div>
     </footer>
   );

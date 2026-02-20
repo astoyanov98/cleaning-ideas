@@ -38,6 +38,13 @@ export default function HeroSection() {
             системи - доказано решение, използвано в САЩ, Канада, Австралия и
             Европа.
           </p>
+          <p 
+            className={`mt-2 max-w-xl text-sm text-neutral-500 transition-all duration-700 ease-out delay-200 ${
+              isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+            }`}
+          >
+            Всеки клиент получава <span className="font-semibold text-emerald-600">сертификат</span>, гарантиращ, че почистването отговаря на всички нормативни стандарти.
+          </p>
 
           <div 
             className={`mt-6 flex flex-wrap gap-3 transition-all duration-700 ease-out delay-300 ${
@@ -85,7 +92,7 @@ export default function HeroSection() {
             <SmartImage
               alt="Оборудване за професионално почистване в действие"
               className="h-80 w-full md:h-[28rem]"
-              src="/image.png"
+              src="/image.jpg"
             />
           </div>
         </div>

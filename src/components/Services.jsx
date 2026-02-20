@@ -37,15 +37,30 @@ export default function Services() {
     <section id="uslugi" ref={sectionRef} className="scroll-mt-24 border-y border-neutral-200 bg-white md:scroll-mt-28">
       <div className="mx-auto max-w-7xl px-3 py-16">
         <div 
-          className={`mb-8 transition-all duration-700 ease-out ${
+          className={`mb-10 transition-all duration-700 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">
-            Услуги
+          <div className="flex items-center gap-3 mb-3">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </span>
+            <span className="text-sm font-semibold uppercase tracking-widest text-emerald-600">Какво предлагаме</span>
+          </div>
+          <h2 className="text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl md:text-4xl">
+            Нашите услуги
           </h2>
-          <p className="mt-2 max-w-2xl text-sm text-neutral-600">
-            Изберете услуга. Останалите карти са примерни и могат да се заменят.
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-neutral-600">
+            Фирмата за професионално почистване на кухненски вентилационни системи{" "}
+            <span className="font-semibold text-emerald-700">„Cleaning Ideas"</span>{" "}
+            предлага специални технологии за почистването на всички елементи от Вашата кухненска аспирация:{" "}
+            <span className="text-neutral-800">филтри</span>,{" "}
+            <span className="text-neutral-800">чадъри</span>,{" "}
+            <span className="text-neutral-800">мотори (двигатели)</span>,{" "}
+            <span className="text-neutral-800">въздуховоди</span>{" "}
+            <span className="text-neutral-500">/вътрешни и външни/</span>.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -65,10 +80,10 @@ export default function Services() {
             return (
               <article
                 key={service.title}
-                className={`flex h-full flex-col overflow-hidden rounded-3xl border bg-white text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] ${cardBorder} ${
+                className={`flex h-full flex-col overflow-hidden rounded-3xl border bg-white text-center transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] ${cardBorder} ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
-                style={{ transitionDelay: `${200 + idx * 100}ms` }}
+                style={isVisible ? {} : { transitionDelay: `${200 + idx * 100}ms` }}
               >
                 <div className={`relative flex h-44 items-center justify-center py-2 ${headerBg}`}>
                   <div

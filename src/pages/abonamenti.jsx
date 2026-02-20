@@ -41,18 +41,17 @@ export default function SubscriptionPage() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">Choose your plan</h2>
+          <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">Изберете абонамент</h2>
           <p className="mt-2 text-neutral-600">
-            Switch plans anytime. Every subscription includes a satisfaction guarantee.
+            Всеки абонамент включва гаранция за удовлетвореност.
           </p>
         </div>
 
         <div className="mx-auto flex sm:h-[590px] items-center flex-col gap-5 py-4 sm:flex-row justify-center">
           {plans.map((plan, planIndex) => {
-            const isPro = plan.name === "Expert";
+            const isPro = plan.name === "Професионален";
             const planColor = plan.color || "#5354ae";
             const hoverIcons = plan.hoverIcons || { flames: 0, shields: 0 };
-            const hasOverlay = hoverIcons.flames > 0 || hoverIcons.shields > 0;
             const riskPercent = plan.riskPercent;
             const riskLabel =
               typeof plan.riskLabel === "string"
@@ -62,14 +61,15 @@ export default function SubscriptionPage() {
                   : null;
             const riskColor = plan.riskColor || "text-red-600";
             const isHoverActive = hoveredPlan === plan.name;
+            const hasOverlay = hoverIcons.flames > 0 || hoverIcons.shields > 0;
 
             return (
             <div
               key={plan.name}
               className={[
-                "relative flex h-full w-[290px] flex-col overflow-hidden rounded-[28px] border-4 text-white",
+                "relative flex h-full w-full max-w-[300px] sm:max-w-[290px] flex-col overflow-hidden rounded-[28px] border-4 text-white",
                 "transition-all duration-500 ease-out",
-                isHoverActive ? "scale-[1.01]" : "",
+                isHoverActive ? "md:scale-[1.01]" : "",
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0",
               ].join(" ")}
               style={{ 
@@ -81,22 +81,40 @@ export default function SubscriptionPage() {
               <div
                 className={[
                   "flex h-full flex-col transition-[filter] duration-200",
-                  isHoverActive ? "blur-md" : "",
+                  isHoverActive ? "md:blur-md" : "",
                 ].join(" ")}
               >
                 <div
-                  className="bg-white px-5 pb-3 pt-5 text-center min-h-[113px]"
+                  className="bg-white px-3 pb-3 pt-4 text-center min-h-[130px] md:min-h-[113px]"
                   style={{ color: planColor }}
                 >
-                  <div className="text-2xl font-extrabold uppercase tracking-[0.16em]">
+                  <div className="text-base sm:text-xl font-extrabold uppercase tracking-normal sm:tracking-wide leading-tight">
                     {plan.name}
                   </div>
                   <div
-                    className="mt-1 text-[10px] font-semibold uppercase tracking-[0.24em]"
+                    className="mt-1 text-[9px] sm:text-[10px] font-semibold uppercase tracking-wide sm:tracking-[0.24em] leading-snug"
                     style={{ color: planColor }}
                   >
                     {plan.subtitle}
                   </div>
+                  {/* Mobile: Risk badge below title */}
+                  {riskLabel && (
+                    <div
+                      className={[
+                        "mt-2 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide md:hidden",
+                        riskColor,
+                        hoverIcons.shields > 0 ? "bg-emerald-50" : "bg-orange-100",
+                      ].join(" ")}
+                    >
+                      {hoverIcons.flames > 0 && (
+                        <Image src="/flame.png" alt="" width={18} height={18} className="h-4.5 w-4.5" />
+                      )}
+                      {hoverIcons.shields > 0 && (
+                        <ShieldIcon className="h-4.5 w-4.5 text-emerald-500" fill="currentColor" />
+                      )}
+                      <span>{riskLabel}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex flex-1 flex-col gap-3 p-4">
@@ -154,13 +172,11 @@ export default function SubscriptionPage() {
                           </span>
                           <Link
                             href="/kontakti"
-                            className="bg-orange-500 px-4 py-1.5 text-white cursor-pointer"
+                            className="bg-orange-500 px-4 py-1.5 text-white cursor-pointer hover:bg-orange-600 transition-colors"
                             onMouseEnter={() => setHoveredPlan(plan.name)}
                             onMouseLeave={() => setHoveredPlan(null)}
-                            onFocus={() => setHoveredPlan(plan.name)}
-                            onBlur={() => setHoveredPlan(null)}
                           >
-                            Купи
+                            Абониране
                           </Link>
                         </div>
                       </div>
@@ -174,10 +190,11 @@ export default function SubscriptionPage() {
                   </div>
                 )}
               </div>
+              {/* Desktop: Hover overlay */}
               {hasOverlay && (
                 <div
                   className={[
-                    "pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 transition-opacity duration-200",
+                    "pointer-events-none absolute inset-0 z-10 hidden md:flex flex-col items-center justify-center gap-4 transition-opacity duration-200",
                     isHoverActive ? "opacity-100" : "opacity-0",
                   ].join(" ")}
                 >

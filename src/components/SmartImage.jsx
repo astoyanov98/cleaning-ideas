@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-export default function SmartImage({ src, alt, className, imgClassName }) {
+export default function SmartImage({ src, alt, className, imgClassName, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw", priority = false }) {
   const [failed, setFailed] = React.useState(false);
   return (
     <div className={`relative ${className ?? ''}`}>
@@ -9,7 +9,8 @@ export default function SmartImage({ src, alt, className, imgClassName }) {
           src={src}
           alt={alt}
           fill
-          sizes="100vw"
+          sizes={sizes}
+          priority={priority}
           unoptimized={typeof src === 'string' && src.startsWith('http')}
           referrerPolicy="no-referrer"
           className={`h-full w-full ${imgClassName ?? 'object-cover'}`}

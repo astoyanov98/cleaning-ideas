@@ -1,14 +1,14 @@
-﻿import ServiceTemplate from "@/components/ServiceTemplate";
+import ServiceTemplate from "@/components/ServiceTemplate";
 
 const PROCESS_STEPS = [
   {
-    image: "/4fans/etap_1.png",
+    image: "/4fans/etap_1.jpg",
     title: "Нанасяне на активна пяна",
     description:
       "Третираме внимателно замърсените зони, за да започне разтварянето на наслоената мазнина.",
   },
   {
-    image: "/4fans/etap_3.png",
+    image: "/4fans/etap_3.jpg",
     title: "Изплакване и финален контрол",
     description:
       "След изплакване правим проверка за чист мотор и ефективна работа на системата.",
@@ -16,15 +16,15 @@ const PROCESS_STEPS = [
 ];
 
 const BEFORE_AFTER_ITEMS = [
-  { id: "set-1", label: "Комплект 1", image: "/4fans/motorirazlika.png" },
-  { id: "set-2", label: "Комплект 2", image: "/4fans/motorrazlika2.png" },
-  { id: "set-3", label: "Комплект 3", image: "/4fans/motorirazlika.png" },
+  { id: "set-1", label: "Комплект 1", image: "/4fans/motorrazlika.jpg" },
+  { id: "set-2", label: "Комплект 2", image: "/4fans/motorrazlika2.jpg" },
+  { id: "set-3", label: "Комплект 3", image: "/4fans/motorrazlika.jpg" },
 ];
 
 export default function PochistvaneNaMotoriPage() {
   return (
     <ServiceTemplate
-      heroImage="/4fans/etap_3.png"
+      heroImage="/4fans/etap_3.jpg"
       heroOverlayClass="bg-black/45"
       heroTitle="Почистване на"
       heroSubtitle="мотори"

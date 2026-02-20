@@ -55,7 +55,7 @@ export default function FireSafetySection() {
                 alt="Горяща кухня в ресторант"
                 className="h-full w-full"
                 imgClassName="object-contain md:object-cover"
-                src="/fire_anime.png"
+                src="/fire_anime.jpg"
               />
             </div>
             <div className="pointer-events-none absolute -right-4 -top-4 h-10 w-10 rounded-full bg-amber-200/70 blur-md" />

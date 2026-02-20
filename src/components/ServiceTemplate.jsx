@@ -39,20 +39,37 @@ export default function ServiceTemplate({
         <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/90 to-transparent" />
 
         <div className="mx-auto max-w-6xl px-3">
-          <div className="relative overflow-hidden rounded-3xl border border-emerald-200 bg-white/82 p-6 shadow-[0_24px_50px_-36px_rgba(16,65,45,0.45)] backdrop-blur-[1px] md:p-8">
-            <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(transparent_19px,rgba(16,65,45,0.05)_20px,transparent_21px),linear-gradient(90deg,transparent_19px,rgba(16,65,45,0.05)_20px,transparent_21px)] [background-size:28px_28px]" />
-
-            <div className="relative">
-              <h2 className="text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl">
-                {introTitle}
-              </h2>
-              {introParagraphs?.length > 0 && (
-                <div className="mt-3 space-y-2 text-sm text-neutral-700 sm:text-base">
-                  {introParagraphs.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
-                </div>
-              )}
+          <div className="relative overflow-hidden rounded-3xl border border-emerald-200 bg-white/90 p-6 shadow-[0_24px_50px_-36px_rgba(16,65,45,0.45)] backdrop-blur-sm md:p-8">
+            {/* Decorative corner accent */}
+            <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-emerald-400/20" />
+            <div className="pointer-events-none absolute -bottom-4 -left-4 h-16 w-16 rounded-full bg-emerald-300/15" />
+            
+            <div className="relative flex flex-col md:flex-row md:items-start md:gap-6">
+              {/* Info Icon */}
+              <div className="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30 md:mb-0">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7">
+                  <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z" clipRule="evenodd" />
+                </svg>
+              </div>
+              
+              <div className="flex-1">
+                <h2 className="text-xl font-bold tracking-tight text-neutral-900 sm:text-2xl md:text-3xl">
+                  {introTitle}
+                </h2>
+                {introParagraphs?.length > 0 && (
+                  <div className="mt-4 space-y-3">
+                    {introParagraphs.map((paragraph, index) => (
+                      <p 
+                        key={index} 
+                        className="flex items-start gap-2 text-sm text-neutral-700 sm:text-base"
+                      >
+                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+                        <span>{paragraph.replace(/^-\s*/, '')}</span>
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

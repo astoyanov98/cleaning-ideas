@@ -48,8 +48,8 @@ export default function PlanCard({ cta, href = '/kontakti' }) {
           <div className="relative mb-3 flex items-center justify-between">
             <h3 className="text-lg font-semibold tracking-tight">{tier.name}</h3>
             <div className="text-right">
-              <div className="text-xl font-bold text-neutral-900">Custom</div>
-              <div className="text-[11px] text-neutral-500">per site</div>
+              <div className="text-xl font-bold text-neutral-900">По заявка</div>
+              <div className="text-[11px] text-neutral-500">на обект</div>
             </div>
           </div>
 

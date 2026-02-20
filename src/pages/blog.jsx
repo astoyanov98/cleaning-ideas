@@ -11,25 +11,25 @@ const GREASE_TYPES = [
   {
     id: "4.1",
     title: "Течна мазнина /Liquid grease/",
-    image: "/blog/technamaznina.png",
+    image: "/blog/technamaznina.jpg",
     alt: "Течна мазнина",
   },
   {
     id: "4.2",
     title: "Пастообразна (гъста) мазнина /Pasty grease/",
-    image: "/blog/gustamaznina.png",
+    image: "/blog/gustamaznina.jpg",
     alt: "Пастообразна мазнина",
   },
   {
     id: "4.3",
     title: "Суха мазнина /Dry grease/",
-    image: "/blog/suhamaznina.png",
+    image: "/blog/suhamaznina.jpg",
     alt: "Суха мазнина",
   },
   {
     id: "4.4",
     title: "Карбонизирана мазнина /Carbonised grease/",
-    image: "/blog/karboniziranamaznina.png",
+    image: "/blog/karboniziranamaznina.jpg",
     alt: "Карбонизирана мазнина",
   },
 ];
@@ -52,7 +52,7 @@ export default function BlogPage() {
 
         <div className="relative mx-auto max-w-7xl px-3 py-14 md:py-20">
           <span className="inline-flex rounded-full border border-emerald-200 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
-            Blog
+            Блог
           </span>
           <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
             Практично ръководство за безопасна кухненска вентилация
@@ -87,7 +87,7 @@ export default function BlogPage() {
 
           <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
             <Image
-              src="/kitchen.png"
+              src="/kitchen.jpg"
               alt="Кухненска вентилация"
               width={1200}
               height={900}
@@ -107,7 +107,7 @@ export default function BlogPage() {
               3. Как възниква пожарът в кухненската вентилация?
             </h2>
             <p className="mt-3 text-sm text-emerald-50 sm:text-base">
-              Когато трите елемента съвпаднат едновременно, рискът от запалване става критичен.
+              Пожарът възниква при проява на трите условия:
             </p>
             <ul className="mt-5 space-y-2">
               {FIRE_FACTORS.map((factor) => (
@@ -121,7 +121,7 @@ export default function BlogPage() {
 
           <div className="relative min-h-[320px] overflow-hidden rounded-2xl border border-white/30 bg-black/10">
             <Image
-              src="/blog/piramida.png"
+              src="/blog/piramida.jpg"
               alt="Пирамида на пожарния риск"
               fill
               className="object-cover"
@@ -173,7 +173,7 @@ export default function BlogPage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-3 py-12 md:grid-cols-[1fr_1fr] md:items-center md:py-16">
           <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
             <Image
-              src="/blog/shemanakraq.png"
+              src="/blog/shemanakraq.jpg"
               alt="Схема на процеса на почистване"
               width={1200}
               height={900}
@@ -210,21 +210,69 @@ export default function BlogPage() {
               благодарение на който молекулите на химическия препарат взаимодействат с молекулите
               на омазнения слой и по този начин се получава изцяло чиста повърхност.
             </p>
-            <p className="mt-4 rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm font-medium text-sky-900 sm:text-base">
-              Когато комбинираме правилната химия, механика и време за реакция, постигаме стабилен
-              и дълготраен резултат.
-            </p>
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
             <Image
-              src="/blog/kakrabotim.png"
+              src="/blog/kakrabotim.jpg"
               alt="Как работи адхезията при почистване"
               width={1200}
               height={900}
               className="h-full w-full object-cover"
               sizes="(max-width: 768px) 100vw, 46vw"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#ecfaf2_0%,#ffffff_100%)]">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent" />
+
+        <div className="mx-auto grid max-w-7xl gap-8 px-3 py-12 md:grid-cols-[1fr_1fr] md:items-center md:py-16">
+          <div className="relative mx-auto max-w-sm">
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-emerald-100 to-sky-100 opacity-50 blur-2xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-3 shadow-xl">
+              <Image
+                src="/sertifikat.jpeg"
+                alt="TEGRAS Diploma - Сертификат за почистване на кухненски вентилационни системи"
+                width={400}
+                height={533}
+                className="w-full rounded-lg"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700 mb-4">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+              </svg>
+              TEGRAS сертификат
+            </div>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+              7. Нашият сертификат
+            </h2>
+            <p className="mt-4 text-sm text-neutral-700 sm:text-base">
+              <strong>TEGRAS</strong> (Training for Exhaust and Grease Reduction and Safety) е международно признат стандарт за обучение в областта на почистването на кухненски вентилационни системи.
+            </p>
+            <p className="mt-3 text-sm text-neutral-700 sm:text-base">
+              Нашият специалист <strong>Теодор Бусерски</strong> успешно е завършил обучението, което гарантира познаване на всички видове системи, правилно използване на препарати и спазване на противопожарни стандарти (NFPA 96).
+            </p>
+            <ul className="mt-5 space-y-2">
+              {[
+                "Познаване на всички видове кухненски вентилационни системи",
+                "Правилно използване на почистващи препарати и оборудване",
+                "Спазване на противопожарни стандарти (NFPA 96)",
+                "Безопасни работни практики",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-neutral-700">
+                  <svg className="h-5 w-5 flex-shrink-0 text-emerald-500 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

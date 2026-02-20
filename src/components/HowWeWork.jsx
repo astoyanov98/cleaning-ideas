@@ -6,19 +6,19 @@ const steps = [
   {
     title: 'Първоначална консултация',
     desc: 'Оценяваме вашите нужди и изисквания.',
-    image: '/konsultaciq.png',
+    image: '/konsultaciq.jpg',
     alt: 'Илюстрация за първоначална консултация',
   },
   {
     title: 'Оглед на място и планиране на услугата',
     desc: 'Оглед на място и проверка за безопасност. Подготвяме индивидуален план за почистване.',
-    image: '/planirane.png',
+    image: '/planirane.jpg',
     alt: 'Илюстрация за планиране на услугата',
   },
   {
     title: 'Професионално почистване и отчет',
     desc: 'Сертифицирани техници изпълняват услугата. Получавате документация и препоръки.',
-    image: '/pochistvane.png',
+    image: '/pochistvane.jpg',
     alt: 'Ilustraciya za profesionalno pochistvane i otchet',
     icon: <CheckIcon className="h-7 w-7 text-emerald-500" />,
   },

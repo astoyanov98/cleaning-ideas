@@ -1,6 +1,6 @@
 export const plans = [
   {
-    name: "Start",
+    name: "Стартов пакет",
     subtitle: "Почистване на филтри",
     color: "#5354ae",
     hoverIcons: { flames: 3, shields: 1 },
@@ -18,7 +18,7 @@ export const plans = [
     ],
   },
   {
-    name: "Advance",
+    name: "План +",
     subtitle: "Почистване на филтри и чадъри",
     color: "#3bb88f",
     hoverIcons: { flames: 2, shields: 2 },
@@ -42,7 +42,7 @@ export const plans = [
     ],
   },
   {
-    name: "Expert",
+    name: "Професионален",
     subtitle: "Почистване на филтри, чадъри и мотори",
     color: "#235c74",
     hoverIcons: { flames: 1, shields: 3 },
@@ -68,7 +68,7 @@ export const plans = [
     ],
   },
   {
-    name: "Total Care",
+    name: "Пълен контрол",
     subtitle: "Почистване на филтри, чадъри, мотори и въздуховоди",
     color: "#f68426",
     hoverIcons: { flames: 0, shields: 4 },

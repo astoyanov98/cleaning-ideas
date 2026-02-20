@@ -19,7 +19,7 @@ export default function ProfessionalCareSection() {
             <SmartImage
               alt="Чиста професионална кухня"
               className="h-72 w-full md:h-96"
-              src="/kitchen.png"
+              src="/kitchen.jpg"
             />
             <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-sky-700 shadow-sm backdrop-blur">
               <SparklesIcon className="h-3.5 w-3.5 text-sky-600" />

@@ -22,6 +22,7 @@ export default function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
+    { href: "/", label: "Начало" },
     { href: "/#uslugi", label: "Услуги" },
     { href: "/abonamenti", label: "Абонаменти" },
     { href: "/blog", label: "Блог" },

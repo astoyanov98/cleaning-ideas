@@ -2,7 +2,7 @@ export const services = [
   {
     title: 'Почистване на филтри с ултразвук',
     desc: 'Премахваме натрупванията с ултразвук за по-дълъг живот на филтрите.',
-    image: '/chistenenafiltri.png',
+    image: '/chistenenafiltri.jpg',
     alt: 'Почистване на филтри с ултразвук',
     cta: 'Прочети Повече',
     href: '/pochistvane-na-filtri-s-ultrazvuk',
@@ -10,7 +10,7 @@ export const services = [
   {
     title: 'Почистване на кухненски чадъри',
     desc: 'Почистваме кухненски чадъри и възстановяваме оптималната им работа.',
-    image: '/chistenenachadur.png',
+    image: '/chistenenachadur.jpg',
     alt: 'Почистване на чадър',
     cta: 'Прочети Повече',
     href: '/pochistvane-na-kuhnenski-chadari',
@@ -18,7 +18,7 @@ export const services = [
   {
     title: 'Почистване на мотори',
     desc: 'Професионално почистване на мотори за по-тиха и ефективна работа.',
-    image: '/chistenenamotor.png',
+    image: '/chistenenamotor.jpg',
     alt: 'Почистване на мотор',
     cta: 'Прочети Повече',
     href: '/pochistvane-na-motori',
@@ -26,7 +26,7 @@ export const services = [
   {
     title: 'Почистване на въздуховоди',
     desc: 'Премахваме мазнини и прах от въздуховоди за безопасна вентилация.',
-    image: '/chistenenavuzduhovodi.png',
+    image: '/chistenenavuzduhovodi.jpg',
     alt: 'Почистване на въздуховоди',
     cta: 'Прочети Повече',
     href: '/pochistvane-na-vuzduhovodi',
