@@ -93,6 +93,7 @@ export default function HeroSection() {
               alt="Оборудване за професионално почистване в действие"
               className="h-80 w-full md:h-[28rem]"
               src="/image.jpg"
+              priority={true}
             />
           </div>
         </div>
