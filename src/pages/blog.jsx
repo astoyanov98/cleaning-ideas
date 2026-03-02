@@ -64,7 +64,39 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-white">
+      {/* Section 1: Risk Infographic */}
+      <section className="relative overflow-hidden bg-[#fdfbfd]">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent" />
+        <div className="py-12 md:py-16">
+          <div className="mx-auto max-w-4xl px-3 mb-6">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+              1. Степен на пожарна защита
+            </h2>
+          </div>
+          <div className="w-full flex justify-center">
+            <Image
+              src="/blog/blog1.png"
+              alt="Графика на риска от възникване на пожар - степен на пожарна защита по абонаментни планове"
+              width={900}
+              height={450}
+              priority
+            />
+          </div>
+          <div className="mt-6 flex justify-center">
+            <Link
+              href="/abonamenti"
+              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 font-semibold text-white shadow-lg shadow-emerald-600/25 transition-transform duration-300 hover:scale-105 hover:bg-emerald-500"
+            >
+              Вижте абонаментите
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fdfb_0%,#ffffff_100%)]">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent" />
 
         <div className="mx-auto grid max-w-7xl gap-8 px-3 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center md:py-16">
@@ -250,7 +282,7 @@ export default function BlogPage() {
               TEGRAS сертификат
             </div>
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              7. Нашият сертификат
+              7. Нашата диплома
             </h2>
             <p className="mt-4 text-sm text-neutral-700 sm:text-base">
               <strong>TEGRAS</strong> (Training for Exhaust and Grease Reduction and Safety) е международно признат стандарт за обучение в областта на почистването на кухненски вентилационни системи.

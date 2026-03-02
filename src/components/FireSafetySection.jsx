@@ -41,7 +41,7 @@ export default function FireSafetySection() {
             </h2>
             <p className="mt-4 max-w-xl text-sm text-neutral-600">
               Натрупаните мазнини по чадъри, филтри и въздуховоди са една от
-              най-честите причини за възпламеняване.
+              най-честите причини за възникване на пожар.
             </p>
             <p className="mt-2 max-w-xl text-sm text-neutral-600">
               Професионалното почистване намалява риска и подобрява работата на

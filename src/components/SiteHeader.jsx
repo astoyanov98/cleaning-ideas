@@ -56,7 +56,7 @@ export default function SiteHeader() {
   return (
     <header className="relative sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-2">
-        <Link href="/" className="flex items-center gap-2 md:flex-1" onClick={closeMobileMenu}>
+        <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
           <div className="flex flex-col items-start">
             <Image
               src="/logo.png"

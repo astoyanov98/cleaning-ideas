@@ -13,7 +13,7 @@ export default function HeroSection() {
   const badges = [
     { icon: ShieldIcon, text: "Съответствие с NFPA" },
     { icon: ClockIcon, text: "Гъвкав график" },
-    { icon: SparklesIcon, text: "Екологични продукти" },
+    { icon: SparklesIcon, text: "Сертификат след почистване" },
   ];
 
   return (

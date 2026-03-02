@@ -68,7 +68,7 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
             <span className={`text-lg font-semibold tracking-tight ${footerLinkClass}`}>Cleaning Ideas</span>
           </Link>
           <p className="mt-3 max-w-xs text-sm text-neutral-600">
-            Професионално почистване за кухни, вентилации и бизнес обекти.
+            Професионално почистване на кухни, вентилации и бизнес обекти.
           </p>
 
           <div className="mt-4 flex items-center gap-2">
