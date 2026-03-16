@@ -49,12 +49,12 @@ export default function FireSafetySection() {
             </p>
           </div>
 
-          <div className="relative h-90">
+          <div className="relative h-[320px] sm:h-90">
             <div className="relative overflow-hidden h-full w-full rounded-[28px] bg-white">
               <SmartImage
                 alt="Горяща кухня в ресторант"
                 className="h-full w-full"
-                imgClassName="object-contain md:object-cover"
+                imgClassName="object-cover object-center"
                 src="/fire_anime.jpg"
                 priority={true}
               />

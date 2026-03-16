@@ -66,7 +66,7 @@ export default function SiteHeader() {
               className="h-auto w-36 sm:w-44"
               sizes="(max-width: 640px) 9rem, 11rem"
             />
-            <span className="hidden text-xs font-bold text-secondary sm:block">
+            <span className="mt-0.5 text-[10px] font-bold leading-tight text-secondary sm:text-xs">
               "Safe Kitchens, Secure Businesses"
             </span>
           </div>
