@@ -91,8 +91,12 @@ export default function HomeSeoSection() {
           </div>
         </div>
 
-        {isExpanded && (
-          <div id={contentId} className="mt-8 space-y-8">
+        <div
+          id={contentId}
+          className={`mt-8 space-y-8 overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
+            isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
             <div className="grid gap-5 md:grid-cols-[0.85fr_1.15fr] md:items-start">
               <div className="rounded-3xl border border-neutral-200 bg-white p-5 shadow-sm md:p-6">
                 <h3 className="text-xl font-bold tracking-tight text-neutral-950">
@@ -167,7 +171,6 @@ export default function HomeSeoSection() {
               </div>
             </div>
           </div>
-        )}
       </div>
     </section>
   );

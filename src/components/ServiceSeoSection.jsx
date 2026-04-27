@@ -36,8 +36,12 @@ export default function ServiceSeoSection({ eyebrow, title, intro, sections, clo
           </div>
         </div>
 
-        {isExpanded && (
-          <div id={contentId} className="mt-8 space-y-8">
+        <div
+          id={contentId}
+          className={`mt-8 space-y-8 overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
+            isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
             {sections.map((section, index) => (
               <article
                 key={section.title}
@@ -100,7 +104,6 @@ export default function ServiceSeoSection({ eyebrow, title, intro, sections, clo
               </div>
             )}
           </div>
-        )}
       </div>
     </section>
   );
