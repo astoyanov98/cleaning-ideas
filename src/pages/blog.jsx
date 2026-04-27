@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const FIRE_FACTORS = [
   { id: "o2", label: "O2", description: "Кислород" },
@@ -43,7 +44,15 @@ const WORK_PILLARS = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-white text-neutral-900">
+    <>
+      <Head>
+        <title>Блог | CleaningIdeas.bg</title>
+        <meta
+          name="description"
+          content="Полезни съвети за поддръжка на професионални кухни, хигиенни стандарти и иновации в почистването. Прочетете експертните статии на CleaningIdeas.bg."
+        />
+      </Head>
+      <main className="min-h-screen bg-white text-neutral-900">
       <section className="relative overflow-hidden border-b border-emerald-100 bg-[radial-gradient(circle_at_top_right,#d2f1df_0%,#ecfaf2_32%,#ffffff_70%)]">
         <div className="pointer-events-none absolute inset-0 opacity-65" aria-hidden="true">
           <div className="absolute -left-16 top-8 h-48 w-48 rounded-full bg-emerald-200/40 blur-3xl" />
@@ -80,6 +89,7 @@ export default function BlogPage() {
               width={900}
               height={450}
               priority
+              fetchPriority="high"
             />
           </div>
           <div className="mt-6 flex justify-center">
@@ -308,6 +318,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

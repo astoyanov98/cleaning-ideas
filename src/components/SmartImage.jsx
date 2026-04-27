@@ -20,7 +20,15 @@ const toBase64 = (str) =>
 
 const blurDataURL = `data:image/svg+xml;base64,${toBase64(shimmer)}`;
 
-export default function SmartImage({ src, alt, className, imgClassName, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw", priority = false }) {
+export default function SmartImage({
+  src,
+  alt,
+  className,
+  imgClassName,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  priority = false,
+  fetchPriority,
+}) {
   const [failed, setFailed] = React.useState(false);
   const [loaded, setLoaded] = React.useState(false);
   const isExternal = typeof src === 'string' && src.startsWith('http');
@@ -41,6 +49,7 @@ export default function SmartImage({ src, alt, className, imgClassName, sizes = 
           fill
           sizes={sizes}
           priority={priority}
+          fetchPriority={fetchPriority}
           placeholder={isExternal ? undefined : "blur"}
           blurDataURL={isExternal ? undefined : blurDataURL}
           unoptimized={isExternal}

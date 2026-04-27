@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import { useRouter } from "next/router";
 import ContactInfoSection from "./ContactInfoSection";
 
@@ -29,27 +30,6 @@ const InstagramIcon = ({ className = "h-4 w-4" }) => (
   </svg>
 );
 
-const GoogleGIcon = ({ className = "h-4 w-4" }) => (
-  <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
-    <path
-      fill="#4285F4"
-      d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.31h6.44a5.5 5.5 0 0 1-2.39 3.61v3h3.87c2.26-2.08 3.57-5.15 3.57-8.65z"
-    />
-    <path
-      fill="#34A853"
-      d="M12 24c3.24 0 5.95-1.07 7.93-2.91l-3.87-3c-1.07.72-2.44 1.16-4.06 1.16-3.12 0-5.76-2.11-6.7-4.95H1.3v3.11A12 12 0 0 0 12 24z"
-    />
-    <path
-      fill="#FBBC05"
-      d="M5.3 14.3A7.2 7.2 0 0 1 4.93 12c0-.8.14-1.57.37-2.3V6.59H1.3A12 12 0 0 0 0 12c0 1.94.46 3.78 1.3 5.41l4-3.11z"
-    />
-    <path
-      fill="#EA4335"
-      d="M12 4.75c1.76 0 3.35.61 4.6 1.81l3.45-3.45C17.94 1.14 15.23 0 12 0A12 12 0 0 0 1.3 6.59l4 3.11c.94-2.84 3.58-4.95 6.7-4.95z"
-    />
-  </svg>
-);
-
 export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
   const router = useRouter();
   const hideContactSection = router.pathname === "/kontakti";
@@ -65,7 +45,9 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 to-sky-600 font-bold text-white">
               CI
             </span>
-            <span className={`text-lg font-semibold tracking-tight ${footerLinkClass}`}>Cleaning Ideas</span>
+            <span className={`text-lg font-semibold tracking-tight text-black ${footerLinkClass}`}>
+              Cleaning Ideas
+            </span>
           </Link>
           <p className="mt-3 max-w-xs text-sm text-neutral-600">
             Професионално почистване на кухни, вентилации и бизнес обекти.
@@ -92,10 +74,10 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
             </Link>
             <Link
               href="mailto:office@cleaningideas.bg"
-              aria-label="Google Mail"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[0_10px_20px_-12px_rgba(0,0,0,0.28)] transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:shadow-[0_16px_28px_-12px_rgba(66,133,244,0.5)]"
+              aria-label="Email"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-secondary shadow-[0_10px_20px_-12px_rgba(0,95,113,0.45)] ring-1 ring-inset ring-emerald-100 transition duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-[0_16px_28px_-12px_rgba(16,185,129,0.55)]"
             >
-              <GoogleGIcon className="h-5 w-5" />
+              <Mail className="h-5 w-5" aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -174,9 +156,6 @@ export default function SiteFooter({ maxWidth = "max-w-7xl" }) {
 
       <div className="border-t border-neutral-200 py-6 text-center text-xs text-neutral-500">
         <p>© {new Date().getFullYear()} Cleaning Ideas. Всички права запазени.</p>
-        <Link href="/politika-za-poveritelnost" className="mt-2 inline-block text-neutral-500 hover:text-emerald-600 transition-colors">
-          Политика за поверителност
-        </Link>
       </div>
     </footer>
   );

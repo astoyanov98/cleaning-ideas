@@ -5,6 +5,7 @@ import HowWeWork from './HowWeWork';
 import FireSafetySection from './FireSafetySection';
 import ProfessionalCareSection from './ProfessionalCareSection';
 import FireStatsSection from './FireStatsSection';
+import HomeSeoSection from './HomeSeoSection';
 
 export default function Landing() {
   return (
@@ -14,6 +15,7 @@ export default function Landing() {
       <FireStatsSection />
       <Services />
       <HowWeWork />
+      <HomeSeoSection />
       {/* <ProfessionalCareSection /> */}
     </main>
   );

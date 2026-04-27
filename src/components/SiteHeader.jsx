@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function HeaderLink({ href, className, children, onClick }) {
@@ -26,6 +27,7 @@ export default function SiteHeader() {
     { href: "/#uslugi", label: "Услуги" },
     { href: "/abonamenti", label: "Абонаменти" },
     { href: "/blog", label: "Блог" },
+    { href: "/kontakti", label: "Контакти" },
   ];
 
   useEffect(() => {
@@ -54,7 +56,7 @@ export default function SiteHeader() {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="relative sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/90 backdrop-blur">
+    <header className="relative sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/95">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-2">
         <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
           <div className="flex flex-col items-start">
@@ -63,6 +65,9 @@ export default function SiteHeader() {
               alt="Cleaning Ideas Logo"
               width={702}
               height={355}
+              priority
+              loading="eager"
+              fetchPriority="high"
               className="h-auto w-36 sm:w-44"
               sizes="(max-width: 640px) 9rem, 11rem"
             />
@@ -83,12 +88,13 @@ export default function SiteHeader() {
             </HeaderLink>
           ))}
 
-          <HeaderLink
-            href="/kontakti"
-            className="ml-2 rounded-xl bg-sky-500 px-4 py-2 font-medium text-white hover:bg-sky-400"
+          <a
+            href="tel:+359884918067"
+            className="ml-2 inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-medium text-white transition hover:bg-sky-400"
           >
-            Контакти
-          </HeaderLink>
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            0884918067
+          </a>
         </nav>
 
         <button
@@ -111,7 +117,7 @@ export default function SiteHeader() {
       </div>
 
       <div
-        className={`absolute inset-x-0 top-full z-40 border-t border-neutral-200 bg-white/95 px-3 shadow-lg transition-all duration-300 md:hidden ${
+        className={`absolute inset-x-0 top-full z-40 border-t border-neutral-200 bg-white px-3 shadow-lg transition-all duration-300 md:hidden ${
           mobileMenuOpen
             ? "visible translate-y-0 opacity-100"
             : "pointer-events-none invisible -translate-y-2 opacity-0"
@@ -129,13 +135,14 @@ export default function SiteHeader() {
             </HeaderLink>
           ))}
 
-          <HeaderLink
-            href="/kontakti"
+          <a
+            href="tel:+359884918067"
             onClick={closeMobileMenu}
-            className="mt-2 rounded-xl bg-sky-500 px-4 py-2 text-center font-medium text-white hover:bg-sky-400"
+            className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-4 py-2 text-center font-medium text-white transition hover:bg-sky-400"
           >
-            Контакти
-          </HeaderLink>
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            0884918067
+          </a>
         </nav>
       </div>
     </header>

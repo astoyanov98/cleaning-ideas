@@ -10,6 +10,7 @@ export default function ServiceTemplate({
   processSteps,
   beforeAfterTitle,
   beforeAfterItems,
+  children,
 }) {
   return (
     <main className="min-h-screen bg-white text-neutral-900">
@@ -20,6 +21,7 @@ export default function ServiceTemplate({
           alt={heroTitle}
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="absolute inset-0 -z-20 object-cover"
         />
@@ -212,6 +214,8 @@ export default function ServiceTemplate({
           </div>
         </div>
       </section>
+
+      {children}
 
       <style jsx global>{`
         @keyframes beforeAfterCarouselMove {

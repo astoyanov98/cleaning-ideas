@@ -26,7 +26,7 @@ export default function HeroSection() {
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
             }`}
           >
-            Професионално почистване на кухненска вентилация
+            Професионално почистване на кухненска аспирация
           </h1>
           <p 
             className={`mt-3 max-w-xl text-sm text-neutral-500 transition-all duration-700 ease-out delay-150 ${
@@ -94,6 +94,7 @@ export default function HeroSection() {
               className="h-80 w-full md:h-[28rem]"
               src="/image.jpg"
               priority={true}
+              fetchPriority="high"
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import { ShieldIcon } from "../components/icons";
 import { plans } from "../data/subscriptionPlans";
@@ -34,14 +35,22 @@ export default function SubscriptionPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
-      <section className="mx-auto max-w-6xl px-3 py-8">
+    <>
+      <Head>
+        <title>Нашите абонаменти | CleaningIdeas.bg</title>
+        <meta
+          name="description"
+          content="Осигурете си спокойствие с абонаментните планове на CleaningIdeas.bg. Редовна поддръжка и преференциални цени за вашия бизнес. Запитвания на 0884918067."
+        />
+      </Head>
+      <main className="min-h-screen bg-white text-neutral-900 selection:bg-sky-300/40">
+        <section className="mx-auto max-w-6xl px-3 py-8">
         <div 
           className={`mb-10 max-w-3xl transition-all duration-700 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <h2 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">Изберете абонамент</h2>
+          <h1 className="md:text-3xl text-2xl font-bold tracking-tight sm:text-4xl">Изберете абонамент</h1>
           <p className="mt-2 text-neutral-600">
             Всеки абонамент включва гаранция за удовлетвореност.
           </p>
@@ -234,7 +243,8 @@ export default function SubscriptionPage() {
           );
           })}
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }
