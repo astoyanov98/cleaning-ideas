@@ -17,6 +17,15 @@ const nextConfig = {
 
   return [
     {
+      source: "/",
+      headers: [
+        {
+          key: "Cache-Control",
+          value: oneMonth,
+        },
+      ],
+    },
+    {
       source: "/((?!api|_next|.*\\..*).*)",
       headers: [
         {
